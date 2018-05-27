@@ -1,0 +1,120 @@
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\ApplicationInsights.config
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\roslyn\csc.exe
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\roslyn\System.Collections.Immutable.dll
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\roslyn\System.Reflection.Metadata.dll
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\roslyn\vbc.exe
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\roslyn\VBCSCompiler.exe
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\roslyn\VBCSCompiler.exe.config
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\QuanLyBanHang.dll.config
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\QuanLyBanHang.dll
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\QuanLyBanHang.pdb
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\Antlr3.Runtime.dll
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\Microsoft.AI.Agent.Intercept.dll
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\Microsoft.AI.DependencyCollector.dll
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\Microsoft.AI.Web.dll
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\Microsoft.AI.WindowsServer.dll
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\Microsoft.ApplicationInsights.dll
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\Microsoft.Web.Infrastructure.dll
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\Newtonsoft.Json.dll
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\System.Web.Helpers.dll
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\System.Web.Mvc.dll
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\System.Web.Optimization.dll
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\System.Web.Razor.dll
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\System.Web.WebPages.Deployment.dll
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\System.Web.WebPages.dll
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\System.Web.WebPages.Razor.dll
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\WebGrease.dll
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\Microsoft.AI.DependencyCollector.xml
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\Microsoft.AI.Web.xml
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\Microsoft.AI.WindowsServer.xml
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\Microsoft.ApplicationInsights.xml
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\System.Web.Helpers.xml
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\System.Web.Mvc.xml
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\System.Web.Optimization.xml
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\System.Web.Razor.xml
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\System.Web.WebPages.xml
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\System.Web.WebPages.Deployment.xml
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\System.Web.WebPages.Razor.xml
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\Antlr3.Runtime.pdb
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\Newtonsoft.Json.xml
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.csprojResolveAssemblyReference.cache
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.dll
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.pdb
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\Model.dll
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\EntityFramework.dll
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\Model.pdb
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\EntityFramework.xml
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\EntityFramework.SqlServer.dll
+D:\BT_HK8\QuanLyBanHang\QuanLyBanHang\bin\EntityFramework.SqlServer.xml
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\ApplicationInsights.config
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\roslyn\csc.exe
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\roslyn\vbc.exe
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\roslyn\VBCSCompiler.exe
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\QuanLyBanHang.dll.config
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\QuanLyBanHang.dll
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\QuanLyBanHang.pdb
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\Antlr3.Runtime.dll
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\EntityFramework.dll
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\EntityFramework.SqlServer.dll
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\Microsoft.AI.Web.dll
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\Microsoft.ApplicationInsights.dll
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\Model.dll
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\Newtonsoft.Json.dll
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\System.Web.Helpers.dll
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\System.Web.Mvc.dll
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\System.Web.Optimization.dll
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\System.Web.Razor.dll
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\System.Web.WebPages.Deployment.dll
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\System.Web.WebPages.dll
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\System.Web.WebPages.Razor.dll
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\WebGrease.dll
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\Model.pdb
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\EntityFramework.xml
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\EntityFramework.SqlServer.xml
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\Microsoft.AI.Web.xml
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\Microsoft.ApplicationInsights.xml
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\System.Web.Helpers.xml
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\System.Web.Mvc.xml
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\System.Web.Optimization.xml
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\System.Web.Razor.xml
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\System.Web.WebPages.xml
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\System.Web.WebPages.Deployment.xml
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\System.Web.WebPages.Razor.xml
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\Antlr3.Runtime.pdb
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\Newtonsoft.Json.xml
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.csprojResolveAssemblyReference.cache
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.dll
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.pdb
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\Common.dll
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\Common.pdb

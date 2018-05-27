@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CLOTHING</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- boostrap css -->
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/libs/themify-icons/themify-icons.css" rel="stylesheet" />
+    <!-- jquery -->
+    <script src="~/Scripts/jquery-2.2.4.min.js"></script>
+    <!-- boostrap js -->
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <!--  font awesome -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=vietnamese" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700&amp;subset=vietnamese" rel="stylesheet">
+    <!-- font chữ -->
+    <link href="~/libs/css/index.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="page" class="content">
+        <header>
+            <div class="row">
+                <div class="col-sm-12">
+                    <input type="text" class="search" name="search" placeholder="Search..">
+                </div>
+                <div class="col-sm-12">
+                    <div class="logo-page">
+                        <span class="helper-logo"></span>
+                        <img src="~/libs/Image/logo/logo.jpg">
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="menu-top">
+                        <ul>
+                            <li><a href="">HOME</a></li>
+                            <li><a href="">ABOUT</a></li>
+                            <li><a href="">CLOTHING</a></li>
+                            <li><a href="">ACCESSORIES</a></li>
+                            <li><a href="">SALE</a></li>
+                            <li><a href="">NEWS</a></li>
+                            <li><a href="">BLOG</a></li>
+                            <li><a href="">FAQS</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="bread-crum">
+                        <a href="" class="child-bread-crum">Home</a>
+                        <span>></span>
+                        <a href="" class="child-bread-crum">Clothing</a>
+                        <span>></span>
+                        <a href="" class="child-bread-crum active">New Arrivals</a>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="big-category">
+                        <div class="title-category">
+                            PRODUCT
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="menu-bottom">
+                        <ul>
+                            <li><a href="" class="active">New Arrivals</a></li>
+                            <li><a href="">TOP</a></li>
+                            <li><a href="">Shirt</a></li>
+                            <li><a href="">Dress</a></li>
+                            <li><a href="">Vest</a></li>
+                            <li><a href="">Skirt/Shorts</a></li>
+                            <li><a href="">Pants</a></li>
+                            <li><a href="">Signature Line</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="wrapper">
+                @RenderBody()
+            </section>
+        </main>
+    </div>
+    <div class="container-fluid">
+        <footer>
+            <div class="row footer">
+                <div class="col-sm-1">
+                    <img src="~/libs/Image/logo/logo.jpg" class="logo-footer" alt="">
+                </div>
+                <div class="col-sm-7">
+                    <div class="row">
+                        <div class="menu-footer">
+                            <ul>
+                                <li><a href="" class="active">HOME</a></li>
+                                <li><a href="">ABOUT</a></li>
+                                <li><a href="">CLOTHING</a></li>
+                                <li><a href="">ACCESSORIES</a></li>
+                                <li><a href="">NEWS</a></li>
+                                <li><a href="">BLOG</a></li>
+                                <li><a href="">FAQS</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="icon-social">
+                        <span><i class="fa fa-facebook"></i></span>
+                        <span><i class="fa fa-instagram"></i></span>
+                        <span><i class="fa fa-youtube"></i></span>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="contact">
+                        <div>REN STORE 2A NGUYEN THIEP ST., DIST 1</div>
+                        <div>OPEN EVERYDAY: 9:30AM - 9:30PM</div>
+                        <div>TEL: (+84) 123 886 4521</div>
+                        <div>EMAIL: ORDER@RENBYTEE.NET</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    @foreach (var item in ViewBag.DanhSachSanPham)
+    {
+                        <!-- A PRODUCT -->
+        <div class="col-sm-3 a-product">
+            <div class="top">
+                <a href="">
+                   
+                    <img src="~/libs/Image/product/h3.jpg" />
+                </a>
+            </div>
+            <div class="bot">
+                <a class="title">@item.TenSanPham</a>
+                <div class="price">Price: @item.Gia đ</div>
+                <div class="colour">Colour: @item.Mau</div>
+                <div class="size">Size: @item.KichCo</div>
+            </div>
+        </div>
+                    <!-- END PRODUCT -->
+    }
+</div>
+<div class="row">
+    <div class="col-sm-12" style="float:right">
+        <div class="pagination">
+            <ul>
+                <li><a href="">1</a></li>
+                <li><a href="">2</a></li>
+                <li><a href="">></a></li>
+                <li><a href="">>></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+

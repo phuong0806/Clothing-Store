@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="~/Scripts/jquery-2.2.4.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <!------ Include the above in your HEAD tag ---------->
+    <link href="~/libs/css/loginAdmin.css" rel="stylesheet" />
+    <script src="~/libs/js/loginAdmin.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="login-container">
+            <div id="output">
+                @if (ViewBag.Error != null)
+                {
+                    @ViewBag.Error
+                }
+            </div>
+            <div class="avatar">
+            </div>
+            <div class="form-box">
+                <form action="/Admin/Home/Login" method="post">
+                    <input type="text" name="username" placeholder="Username...">
+                    <input type="password" name="password" placeholder="Password...">
+                    <button class="btn btn-info btn-block login" type="submit">ĐĂNG NHẬP</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+D:\BT_HK8\QuanLyBanHang\Model\bin\Debug\Model.dll.config
+D:\BT_HK8\QuanLyBanHang\Model\bin\Debug\Model.dll
+D:\BT_HK8\QuanLyBanHang\Model\bin\Debug\Model.pdb
+D:\BT_HK8\QuanLyBanHang\Model\bin\Debug\EntityFramework.dll
+D:\BT_HK8\QuanLyBanHang\Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\BT_HK8\QuanLyBanHang\Model\bin\Debug\EntityFramework.xml
+D:\BT_HK8\QuanLyBanHang\Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\BT_HK8\QuanLyBanHang\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+D:\BT_HK8\QuanLyBanHang\Model\obj\Debug\Model.dll
+D:\BT_HK8\QuanLyBanHang\Model\obj\Debug\Model.pdb
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\Model\obj\Debug\Model.dll
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\Model\obj\Debug\Model.pdb
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\Model\bin\Debug\Model.dll.config
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\Model\bin\Debug\Model.dll
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\Model\bin\Debug\Model.pdb
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\Model\bin\Debug\EntityFramework.dll
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\Model\bin\Debug\EntityFramework.xml
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache

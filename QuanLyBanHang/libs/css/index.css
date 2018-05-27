@@ -1,0 +1,405 @@
+Fp/* HEADER */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'proma-regu';
+    src: url('../font/VNF-ProximaNovaCond-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'proma';
+    src: url('../font/FontsFree-Net-Proxima-Nova-Cond-Light.otf') format('opentype');
+}
+@font-face {
+    font-family: 'helti';
+    src: url('../font/HelveticaNeue.otf') format('opentype');
+}
+#page {
+    width: 992px;
+    margin: 0 auto;
+}
+
+.search {
+    width: 235px;
+    margin-top: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: white;
+    background-image: url('../Image/logo/search-icon.png');
+    background-position: 11px 6px;
+    background-repeat: no-repeat;
+    background-size: 18px;
+    padding: 5px 20px 5px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    float: right;
+}
+
+.logo-page {
+    text-align: center;
+    height: 290px;
+}
+
+.logo-page .helper-logo {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.logo-page img {
+    vertical-align: middle;
+}
+
+.menu-top {
+
+    font-family: proma;
+}
+
+.menu-top ul {
+
+    list-style: none;
+    /* margin-top: 70px; */
+    text-align: center;
+}
+
+.menu-top ul li {
+
+    display: inline-block;
+}
+
+.menu-top ul li a:hover {
+    color: #E51B23;
+}
+
+.menu-top ul li a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    font-size: 24px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 23px;
+    text-decoration: none solid rgb(237, 166, 166);
+    text-align: center;
+    text-indent: 0px;
+    text-transform: uppercase;
+    vertical-align: baseline;
+    white-space: normal;
+    word-spacing: 0px;
+}
+
+.bread-crum {
+
+    text-align: center;
+}
+
+.child-bread-crum.active {
+    color: #E51B23;
+}
+
+.bread-crum a {
+
+    font-family: proma, arial, serif;
+
+    font-size: 17.6px;
+
+    font-style: normal;
+
+    font-variant: normal;
+
+    font-weight: 400;
+
+    letter-spacing: normal;
+
+    line-height: 23px;
+
+    color: #333;
+
+    text-align: center;
+
+    text-indent: 0px;
+
+    text-transform: none;
+
+    vertical-align: baseline;
+
+    white-space: normal;
+
+    word-spacing: 0px;
+}
+
+.title-category {
+    text-align: center;
+    display: block;
+    font-family: proma, arial, helvetica, sans-serif;
+    font-size: 56px;
+    font-style: normal;
+    font-variant: normal;
+    letter-spacing: normal;
+    line-height: 56px;
+    text-align: center;
+    text-indent: 0px;
+    text-transform: uppercase;
+    vertical-align: baseline;
+    white-space: normal;
+    word-spacing: 0px;
+    margin: auto;
+    width: 240px;
+    margin-top: 60px;
+    border-bottom: 1px dashed #333;
+}
+
+.big-category {
+
+    width: 100%;
+
+    height: 30px;
+
+    text-align: center;
+}
+
+.menu-bottom {
+    margin-bottom: 40px;
+}
+
+.menu-bottom ul {
+
+    list-style: none;
+    margin-top: 70px;
+    text-align: center;
+}
+
+.menu-bottom ul li {
+
+    display: inline-block;
+}
+
+.menu-bottom ul li a.active {
+    color: #E51B23;
+}
+
+.menu-bottom ul li a:hover {
+    color: #E51B23;
+}
+
+.menu-bottom ul li a {
+    font-family: proma;
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    font-size: 24px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 32px;
+    text-decoration: none solid rgb(237, 166, 166);
+    text-align: center;
+    text-indent: 0px;
+    text-transform: none;
+    vertical-align: baseline;
+    white-space: normal;
+    word-spacing: 0px;
+}
+
+
+/* END HEADER*/
+
+
+/* WRAPPER */
+
+.a-product {
+    margin-bottom: 70px;
+}
+
+.a-product .top {
+
+    margin-bottom: 15px;
+}
+
+.a-product .top img {
+
+width: 221px;
+
+height: 331px;
+}
+
+.a-product .bot {
+
+    font-size: 16px;
+
+    font-style: normal;
+
+    font-variant: normal;
+
+    font-weight: 400;
+
+    letter-spacing: normal;
+
+    line-height: 23px;
+
+    text-decoration: none solid rgb(0, 0, 0);
+
+    text-align: left;
+
+    text-indent: 0px;
+
+    text-transform: none;
+
+    vertical-align: baseline;
+
+    white-space: normal;
+
+    word-spacing: 0px;
+}
+
+.a-product .bot .title {
+    font-family: arial, Verdana, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 24px;
+    text-decoration: none solid rgb(237, 166, 166);
+    text-align: left;
+    text-indent: 0px;
+    text-transform: uppercase;
+    vertical-align: baseline;
+    white-space: normal;
+    word-spacing: 0px;
+    color: #333;
+}
+
+.a-product .bot .price {}
+
+.a-product .bot .coulour {}
+
+.a-product .bot .size {}
+
+.pagination {
+
+width: 100%;
+
+text-align: right;
+}
+
+.pagination ul {
+
+list-style: none;
+
+width: 100%;
+}
+
+.pagination ul li {
+
+    display: inline-block;
+}
+
+.pagination ul li a {
+
+    padding: 5px 10px;
+
+    background: #E51B23;
+
+    color: white;
+
+    border-radius: 2px;
+}
+
+
+/* END WRAPPER */
+
+
+/* FOOTER */
+
+footer {
+    border-top: 1px solid #ddd;
+}
+
+.footer {
+    max-width: 992px;
+    margin: auto;
+    padding-top: 10px;
+}
+
+.logo-footer {
+
+    width: 80px;
+
+    height: 80px;
+}
+
+/*.menu-footer {
+
+    list-style: none;
+
+    margin-top: 8px;
+
+    padding-left: 10px;
+}
+
+.menu-footer ul {
+
+    list-style: none;
+}
+
+.menu-footer ul li {
+
+    display: inline-block;
+}
+
+.menu-footer ul li a {
+
+    font-size: 13px;
+
+    display: block;
+
+    color: #111;
+
+    padding: 0px 10px;
+
+    font-family: helti;
+}*/
+
+.contact {
+    font-family: helti;
+    font-size: 13px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 23px;
+    text-decoration: none solid rgb(17, 17, 17);
+    text-align: center;
+    text-indent: 0px;
+    text-transform: none;
+    vertical-align: baseline;
+    white-space: normal;
+    word-spacing: 0px;
+    margin-top: 10px;
+}
+
+.icon-social {}
+
+.icon-social span {
+    display: inline-block;
+    padding-left: 10px;
+    background: #ddd;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 20px;
+    cursor: pointer;
+    color: black;
+    padding: 5px 10px;
+}
+
+
+/* END FOOTER */

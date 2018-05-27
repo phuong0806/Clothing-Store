@@ -1,0 +1,9 @@
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\Common\bin\Debug\Common.dll
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\Common\bin\Debug\Common.pdb
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\Common\bin\Debug\Model.dll
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\Common\bin\Debug\EntityFramework.dll
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\Common\bin\Debug\Model.pdb
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\Common\bin\Debug\EntityFramework.xml
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\Common\obj\Debug\Common.dll
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\QuanLyBanHang\Common\obj\Debug\Common.pdb
