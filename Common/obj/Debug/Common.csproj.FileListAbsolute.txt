@@ -19,3 +19,15 @@ C:\Users\anhph\OneDrive\Documents\Visual Studio 2015\Projects\Store\Store\Common
 C:\Users\anhph\OneDrive\Documents\Visual Studio 2015\Projects\Store\Store\Common\bin\Debug\Common.dll.config
 C:\Users\anhph\OneDrive\Documents\Visual Studio 2015\Projects\Store\Store\Common\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\anhph\OneDrive\Documents\Visual Studio 2015\Projects\Store\Store\Common\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\Store\Store\Common\bin\Debug\Common.dll.config
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\Store\Store\Common\bin\Debug\Common.dll
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\Store\Store\Common\bin\Debug\Common.pdb
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\Store\Store\Common\bin\Debug\EntityFramework.dll
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\Store\Store\Common\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\Store\Store\Common\bin\Debug\Model.dll
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\Store\Store\Common\bin\Debug\Model.pdb
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\Store\Store\Common\bin\Debug\EntityFramework.xml
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\Store\Store\Common\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\Store\Store\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\Store\Store\Common\obj\Debug\Common.dll
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\Store\Store\Common\obj\Debug\Common.pdb

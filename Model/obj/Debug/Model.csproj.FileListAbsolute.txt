@@ -28,3 +28,13 @@ C:\Users\anhph\OneDrive\Documents\Visual Studio 2015\Projects\Store\Store\Model\
 C:\Users\anhph\OneDrive\Documents\Visual Studio 2015\Projects\Store\Store\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
 C:\Users\anhph\OneDrive\Documents\Visual Studio 2015\Projects\Store\Store\Model\obj\Debug\Model.dll
 C:\Users\anhph\OneDrive\Documents\Visual Studio 2015\Projects\Store\Store\Model\obj\Debug\Model.pdb
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\Store\Store\Model\bin\Debug\Model.dll.config
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\Store\Store\Model\bin\Debug\Model.dll
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\Store\Store\Model\bin\Debug\Model.pdb
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\Store\Store\Model\bin\Debug\EntityFramework.dll
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\Store\Store\Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\Store\Store\Model\bin\Debug\EntityFramework.xml
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\Store\Store\Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\Store\Store\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\Store\Store\Model\obj\Debug\Model.dll
+C:\Users\VTA\Documents\Visual Studio 2015\Projects\Store\Store\Model\obj\Debug\Model.pdb

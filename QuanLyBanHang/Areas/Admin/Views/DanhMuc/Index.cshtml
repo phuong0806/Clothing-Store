@@ -1,0 +1,81 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    var danhSachDanhMuc = ViewBag.danhSachDanhMuc;
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@section cssHeader {
+}
+
+@section jsFooter {
+    <script src="~/libs/js/danhmuc.js"></script>
+}
+
+<h1>DANH MỤC SẢN PHẨM</h1>
+<div class="row mb-2">
+    <div class="col-sm-12">
+        <div class="float-left">
+            <input type="text" name="name" class="search-box" value="" placeholder="Search..." />
+        </div>
+        <div class="float-right">
+            <a class="my-btn btn-add" data-toggle="modal" data-target="#myModal">Thêm danh mục</a>
+        </div>
+    </div>
+</div>
+<table class="table" style="text-align:center">
+    <thead style="background:#ddd">
+        <tr>
+            <th scope="col" width="85%" class="text-left">Danh mục</th>
+            <th scope="col" width="15%"></th>
+        </tr>
+    </thead>
+    <tbody>
+            @foreach (var item in danhSachDanhMuc)
+            {
+                <tr>
+                    <td class="text-left">@item.TenLoai</td>
+                    <td>
+                        <a class="btn btn-edit" data-id="@item.ID" data-toggle="modal" data-target="#myModal"><i class="ti-pencil-alt"></i></a>
+                        <a class="btn btn-delete" data-id="@item.ID"><i class="ti-trash"></i></a>
+                    </td>
+                </tr>
+            }
+    </tbody>
+</table>
+
+<!-- Button to Open the Modal -->
+<!-- The Modal -->
+<div class="modal" id="myModal">
+    <div class="modal-dialog" style="max-width:750px">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title"> DANH MỤC </h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <!-- Modal body -->
+            <form id="form-save" enctype="multipart/form-data">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="tenloai" id="tenloai" />
+                                <input type="hidden" class="form-control" value="0" name="id" id="id" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button class="btn-save" style="width:100%">Lưu</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+
