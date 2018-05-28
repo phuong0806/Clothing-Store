@@ -34,7 +34,6 @@
 
     $('.btn-save').click(function () {
         if ($('#form-save-add').valid()) {
-
             var sanpham = {
                 TenSanPham: $('#tensanpham').val(),
                 HinhAnh: $('#hinhanh').attr('src'),
