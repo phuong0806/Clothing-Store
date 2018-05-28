@@ -1,4 +1,25 @@
 ﻿$(document).ready(function () {
+    $('#form-save').validate({
+        rules: {
+            TenSanPham: "required",
+            gia: "required",
+            maloai: "required",
+            MaThuongHieu: "required",
+            Mau: "required",
+            KichCo: "required",
+            MoTa: "required"
+        },
+        messages: {
+            TenSanPham: "Bạn phải nhập trường này",
+            gia: "Bạn phải nhập trường này",
+            maloai: "Bạn phải nhập trường này",
+            MaThuongHieu: "Bạn phải nhập trường này",
+            Mau: "Bạn phải nhập trường này",
+            KichCo: "Bạn phải nhập trường này",
+            MoTa: "Bạn phải nhập trường này"
+        },
+    });
+
     function resetModal() {
         $('#tensanpham').val("");
         $('#hinhanh').val("/libs/Image/logo/add.png");
@@ -12,42 +33,46 @@
     }
 
     $('.btn-save').click(function () {
-        var sanpham = {
-            TenSanPham: $('#tensanpham').val(),
-            HinhAnh: $('#hinhanh').attr('src'),
-            Gia: $('#gia').val(),
-            MaLoai: $('#maloai').val(),
-            MaThuongHieu: $('#thuonghieu').val(),
-            Mau: $('#mau').val(),
-            KichCo: $('#kichco').val(),
-            ID: $('#id').val(),
-            Mota: CKEDITOR.instances['fullDescription'].getData()
-        }
+        if ($('#form-save-add').valid()) {
 
-        $.ajax({
-            url: "/Admin/SanPham/Save",
-            data: function () {
+            var sanpham = {
+                TenSanPham: $('#tensanpham').val(),
+                HinhAnh: $('#hinhanh').attr('src'),
+                Gia: $('#gia').val(),
+                MaLoai: $('#maloai').val(),
+                MaThuongHieu: $('#thuonghieu').val(),
+                Mau: $('#mau').val(),
+                KichCo: $('#kichco').val(),
+                ID: $('#id').val(),
+                Mota: CKEDITOR.instances['fullDescription'].getData()
+            }
+
+            $.ajax({
+                url: "/Admin/SanPham/Save",
+                data: function () {
                     var data = new FormData();
                     data.append("SanPham", JSON.stringify(sanpham));
                     data.append("file", $("#upload").get(0).files[0]);
                     return data;
                 }(),
-            contentType: false,
-            processData: false,
-            dataType: "json",
-            type: "POST",
-            success: function (response) {
-                if(response.status) {
-                    $.notify("Thành công", "success");
-                    resetModal();
+                contentType: false,
+                processData: false,
+                dataType: "json",
+                type: "POST",
+                success: function (response) {
+                    if (response.status) {
+                        $.notify("Thành công", "success");
+                        resetModal();
+                    }
+                    else {
+                        $.notify("Thất bại", "error");
+                        resetModal();
+                    }
                 }
-                else {
-                    $.notify("Thất bại", "error");
-                    resetModal();
-                }
-            }
-        })
+            })
+        }
     });
+
 
     $('.btn-delete').click(function () {
         var id = $(this).data('id');
@@ -91,7 +116,7 @@
             success: function (result) {
                 var data = JSON.parse(result.data);
                 $('#tensanpham').val(data.TenSanPham);
-                $('#hinhanh').attr('src',data.HinhAnh);
+                $('#hinhanh').attr('src', data.HinhAnh);
                 $('#gia').val(data.Gia);
                 $('#maloai').val(data.MaLoai);
                 $('#thuonghieu').val(data.MaThuongHieu);

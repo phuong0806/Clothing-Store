@@ -16,7 +16,7 @@ namespace Model.EF
 
         public string MoTa { get; set; }
 
-        public int Gia { get; set; }
+        public int? Gia { get; set; }
 
         public int? MaLoai { get; set; }
 

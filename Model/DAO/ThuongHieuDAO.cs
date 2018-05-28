@@ -18,7 +18,7 @@ namespace Model.DAO
 
         public List<ThuongHieu> getTatCaThuongHieu()
         {
-            var model = db.ThuongHieu.ToList();
+            var model = db.ThuongHieux.ToList();
             return model;
         } 
 

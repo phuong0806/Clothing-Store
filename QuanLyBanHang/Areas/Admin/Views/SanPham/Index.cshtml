@@ -72,7 +72,7 @@
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <!-- Modal body -->
-            <form  enctype="multipart/form-data">
+            <form id="form-save" enctype="multipart/form-data">
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-sm-12">
@@ -96,13 +96,13 @@
                             <div class="form-group row">
                                 <label for="txtGia" class="col-sm-3">Giá</label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control" name="Gia" id="gia">
+                                    <input type="number" class="form-control" name="gia" id="gia">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="selLoai" class="col-sm-3">Loại</label>
                                 <div class="col-sm-9">
-                                    <select class="form-control" name="MaLoai" id="maloai">
+                                    <select class="form-control" name="maloai" id="maloai">
                                         <option value="selected" disabled>--Chọn loại--</option>
                                         @foreach (var item in ViewBag.MaLoai)
                                         {

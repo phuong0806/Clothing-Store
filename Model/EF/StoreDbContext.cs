@@ -12,24 +12,24 @@ namespace Model.EF
         {
         }
 
-        public virtual DbSet<Admin> Admin { get; set; }
-        public virtual DbSet<DonHang> DonHang { get; set; }
-        public virtual DbSet<LoaiSanPham> LoaiSanPham { get; set; }
-        public virtual DbSet<NguoiDung> NguoiDung { get; set; }
-        public virtual DbSet<SanPham> SanPham { get; set; }
-        public virtual DbSet<TaiKhoan> TaiKhoan { get; set; }
-        public virtual DbSet<ThongKe> ThongKe { get; set; }
-        public virtual DbSet<ThuongHieu> ThuongHieu { get; set; }
+        public virtual DbSet<Admin> Admins { get; set; }
+        public virtual DbSet<DonHang> DonHangs { get; set; }
+        public virtual DbSet<LoaiSanPham> LoaiSanPhams { get; set; }
+        public virtual DbSet<NguoiDung> NguoiDungs { get; set; }
+        public virtual DbSet<SanPham> SanPhams { get; set; }
+        public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
+        public virtual DbSet<ThongKe> ThongKes { get; set; }
+        public virtual DbSet<ThuongHieu> ThuongHieux { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<LoaiSanPham>()
-                .HasMany(e => e.SanPham)
+                .HasMany(e => e.SanPhams)
                 .WithOptional(e => e.LoaiSanPham)
                 .HasForeignKey(e => e.MaLoai);
 
             modelBuilder.Entity<ThuongHieu>()
-                .HasMany(e => e.SanPham)
+                .HasMany(e => e.SanPhams)
                 .WithOptional(e => e.ThuongHieu)
                 .HasForeignKey(e => e.MaThuongHieu);
         }

@@ -16,7 +16,7 @@ namespace Model.ViewModel
         public string MoTa { get; set; }
 
         
-        public int Gia { get; set; }
+        public int? Gia { get; set; }
 
         public string GiaString { get; set; }
 

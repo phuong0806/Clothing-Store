@@ -18,7 +18,7 @@ namespace Model.DAO
 
         public List<LoaiSanPham> getTatCaLoai()
         {
-            var model = db.LoaiSanPham.ToList();
+            var model = db.LoaiSanPhams.ToList();
             return model;
         }
     }

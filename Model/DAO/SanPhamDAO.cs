@@ -20,9 +20,9 @@ namespace Model.DAO
 
         public List<SanPhamViewModel> layDanhSachTatCaSanPham()
         {
-            var model = (from sp in db.SanPham
-                         join l in db.LoaiSanPham on sp.MaLoai equals l.ID
-                         join th in db.ThuongHieu on sp.MaThuongHieu equals th.ID
+            var model = (from sp in db.SanPhams
+                         join l in db.LoaiSanPhams on sp.MaLoai equals l.ID
+                         join th in db.ThuongHieux on sp.MaThuongHieu equals th.ID
                          select new SanPhamViewModel
                          {
                              ID = sp.ID,
@@ -49,7 +49,7 @@ namespace Model.DAO
 
         public SanPham laySanPhamTheoID(int id)
         {
-            var model = db.SanPham.Find(id);
+            var model = db.SanPhams.Find(id);
             return model;
         }
 
@@ -57,7 +57,7 @@ namespace Model.DAO
         {
             try
             {
-                db.SanPham.Add(sp);
+                db.SanPhams.Add(sp);
                 db.SaveChanges();
                 return true;
             }
@@ -76,7 +76,7 @@ namespace Model.DAO
         {
             try
             {
-                var entity = db.SanPham.Find(sp.ID);
+                var entity = db.SanPhams.Find(sp.ID);
                 entity.TenSanPham = sp.TenSanPham;
                 entity.MoTa = sp.MoTa;
                 entity.MaLoai = sp.MaLoai;
@@ -98,8 +98,8 @@ namespace Model.DAO
         {
             try
             {
-                var entity = db.SanPham.Find(id);
-                db.SanPham.Remove(entity);
+                var entity = db.SanPhams.Find(id);
+                db.SanPhams.Remove(entity);
                 db.SaveChanges();
                 return true;
             }
