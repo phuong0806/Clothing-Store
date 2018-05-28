@@ -55,8 +55,6 @@ namespace QuanLyBanHang.Areas.Admin.Controllers
         {
             var model = new SanPhamDAO().laySanPhamTheoID(id);
 
-            JavaScriptSerializer serializer = new JavaScriptSerializer();
-
             var output = JsonConvert.SerializeObject(model, 
                             new JsonSerializerSettings
                             {

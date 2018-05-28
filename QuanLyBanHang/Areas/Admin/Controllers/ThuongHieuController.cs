@@ -6,23 +6,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using System.Web.Script.Serialization;
 
 namespace QuanLyBanHang.Areas.Admin.Controllers
 {
-    public class DanhMucController : Controller
+    public class ThuongHieuController : Controller
     {
-        // GET: Admin/DanhMuc
+        // GET: Admin/ThuongHieu
         public ActionResult Index()
         {
-            ViewBag.danhSachDanhMuc = new DanhMucDAO().getDanhMuc();
+            ViewBag.danhSachThuongHieu = new ThuongHieuDAO().getTatCaThuongHieu();
             return View();
         }
 
-        public JsonResult layDanhMuc(int id)
+        public JsonResult layThuongHieu(int id)
         {
 
-            var output = JsonConvert.SerializeObject(new DanhMucDAO().layDanhMucTheoID(id),
+            var output = JsonConvert.SerializeObject(new ThuongHieuDAO().layThuongHieuTheoID(id),
                             new JsonSerializerSettings
                             {
                                 ReferenceLoopHandling = ReferenceLoopHandling.Ignore
@@ -35,14 +34,14 @@ namespace QuanLyBanHang.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public JsonResult Save(LoaiSanPham loaisanpham)
+        public JsonResult Save(ThuongHieu thuonghieu)
         {
-            if (loaisanpham.ID > 0)
+            if (thuonghieu.ID > 0)
             {
                 return Json(new
                 {
                     //them danh muc
-                    status = new DanhMucDAO().update(loaisanpham)
+                    status = new ThuongHieuDAO().update(thuonghieu)
                 });
             }
             else
@@ -50,7 +49,7 @@ namespace QuanLyBanHang.Areas.Admin.Controllers
                 return Json(new
                 {
                     //cap nhat danh muc
-                    status = new DanhMucDAO().insert(loaisanpham)
+                    status = new ThuongHieuDAO().insert(thuonghieu)
                 });
             }
         }
@@ -59,7 +58,7 @@ namespace QuanLyBanHang.Areas.Admin.Controllers
         {
             return Json(new
             {
-                status = new DanhMucDAO().delete(id)
+                status = new ThuongHieuDAO().delete(id)
             });
         }
     }

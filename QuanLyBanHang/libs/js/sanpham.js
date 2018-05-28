@@ -33,7 +33,7 @@
     }
 
     $('.btn-save').click(function () {
-        if ($('#form-save-add').valid()) {
+        if ($('#form-save').valid()) {
             var sanpham = {
                 TenSanPham: $('#tensanpham').val(),
                 HinhAnh: $('#hinhanh').attr('src'),

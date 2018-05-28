@@ -1,17 +1,17 @@
 ﻿$(document).ready(function () {
     $('#form-save').validate({
         rules: {
-            tenloai: "required",
+            tenthuonghieu: "required",
         },
         messages: {
-            tenloai: "Bạn phải nhập tên danh mục"
+            tenthuonghieu: "Bạn phải nhập tên danh mục"
         },
     });
 
     $('.btn-edit').click(function () {
         var id = $(this).data('id');
         $.ajax({
-            url: '/Admin/DanhMuc/layDanhMuc',
+            url: '/Admin/ThuongHieu/layThuongHieu',
             data: {
                 id: id
             },
@@ -20,7 +20,7 @@
             success: function (response) {
                 console.log("AA");
                 var data = JSON.parse(response.data);
-                $('#tenloai').val(data.TenLoai);
+                $('#tenthuonghieu').val(data.TenThuongHieu);
                 $('#id').val(data.ID);
             }
         })
@@ -29,17 +29,17 @@
     $('.btn-save').click(function () {
         if ($('#form-save').valid()) {
             var id = $('#id').val();
-            var tenloai = $('#tenloai').val();
+            var tenthuonghieu = $('#tenthuonghieu').val();
 
-            var loaisanpham = {
-                id: id,
-                tenloai: tenloai
+            var thuonghieu = {
+                ID: id,
+                TenThuongHieu : tenthuonghieu
             }
 
             $.ajax({
-                url: '/Admin/DanhMuc/Save',
+                url: '/Admin/ThuongHieu/Save',
                 data: {
-                    loaisanpham: loaisanpham
+                    thuonghieu: thuonghieu
                 },
                 type: "POST",
                 dataType: "json",
@@ -59,7 +59,7 @@
         if (confirm("Bạn có chắc là xóa không?")) {
             var id = $(this).data('id');
             $.ajax({
-                url: '/Admin/DanhMuc/Delete',
+                url: '/Admin/ThuongHieu/Delete',
                 data: {
                     id: id
                 },

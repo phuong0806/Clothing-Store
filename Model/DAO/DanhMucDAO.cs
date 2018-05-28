@@ -23,6 +23,27 @@ namespace Model.DAO
             return list;
         }
 
+        public LoaiSanPham layDanhMucTheoID(int id)
+        {
+            var entity = db.LoaiSanPhams.Find(id);
+            return entity;
+        }
+
+        public bool delete(int id)
+        {
+            try
+            {
+                var entity = db.LoaiSanPhams.Find(id);
+                db.LoaiSanPhams.Remove(entity);
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
         public bool insert(LoaiSanPham loai)
         {
             try

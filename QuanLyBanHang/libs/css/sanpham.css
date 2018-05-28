@@ -249,6 +249,20 @@ border: none;
 border-bottom: 1px solid #ddd;
 }
 
+.table td img {
+
+    width: 65px;
+    height: 65px;
+}
+
+.table td img {
+
+width: 65px;
+
+height: 65px;
+}
+
+
 .table {
     border: 1px solid #ddd
 }
