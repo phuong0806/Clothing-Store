@@ -157,6 +157,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\DanhMucController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\SanPhamController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -189,6 +190,7 @@
     <Content Include="libs\Image\product\h2.jpg" />
     <Content Include="libs\Image\product\h3.jpg" />
     <Content Include="libs\Image\product\h4.jpg" />
+    <Content Include="libs\js\danhmuc.js" />
     <Content Include="libs\js\loginAdmin.js" />
     <Content Include="libs\js\sanpham.js" />
     <Content Include="libs\plugins\notify.min.js" />
@@ -903,6 +905,7 @@
     <Content Include="libs\font\Naughty Squirrel Striped Demo.otf" />
     <Content Include="libs\font\VNF-ProximaNovaCond-Regular.ttf" />
     <Content Include="Areas\Admin\Views\Home\Login.cshtml" />
+    <Content Include="Areas\Admin\Views\DanhMuc\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
