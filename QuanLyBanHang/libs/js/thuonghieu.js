@@ -18,7 +18,6 @@
             type: "GET",
             datatype: "json",
             success: function (response) {
-                console.log("AA");
                 var data = JSON.parse(response.data);
                 $('#tenthuonghieu').val(data.TenThuongHieu);
                 $('#id').val(data.ID);

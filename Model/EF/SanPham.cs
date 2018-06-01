@@ -9,6 +9,14 @@ namespace Model.EF
     [Table("SanPham")]
     public partial class SanPham
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public SanPham()
+        {
+            DonHang_SanPham = new HashSet<DonHang_SanPham>();
+            KichCoes = new HashSet<KichCo>();
+            Maus = new HashSet<Mau>();
+        }
+
         public int ID { get; set; }
 
         [StringLength(250)]
@@ -18,21 +26,32 @@ namespace Model.EF
 
         public int? Gia { get; set; }
 
+        [StringLength(250)]
+        public string HinhAnh { get; set; }
+
+        public string AnhKhac { get; set; }
+
         public int? MaLoai { get; set; }
 
         public int? MaThuongHieu { get; set; }
 
-        [StringLength(250)]
-        public string HinhAnh { get; set; }
+        public int? SoLuong { get; set; }
 
-        [StringLength(250)]
-        public string Mau { get; set; }
+        public bool? TrangThai { get; set; }
 
-        [StringLength(50)]
-        public string KichCo { get; set; }
+        public string Url { get; set; }
 
-        public virtual LoaiSanPham LoaiSanPham { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DonHang_SanPham> DonHang_SanPham { get; set; }
+
+        public virtual Loai Loai { get; set; }
 
         public virtual ThuongHieu ThuongHieu { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<KichCo> KichCoes { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Mau> Maus { get; set; }
     }
 }

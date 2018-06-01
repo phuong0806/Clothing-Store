@@ -17,60 +17,19 @@ namespace Model.DAO
             db = new StoreDbContext();
         }
 
-        public List<LoaiSanPham> getDanhMuc()
+        public List<DanhMuc> getDanhMuc()
         {
-            var list = db.LoaiSanPhams.ToList();
+            var list = db.DanhMucs.ToList();
             return list;
         }
 
-        public LoaiSanPham layDanhMucTheoID(int id)
+
+        public int? layIdDanhMucTheoLoai(int? id)
         {
-            var entity = db.LoaiSanPhams.Find(id);
-            return entity;
+            var result = db.Loais.Find(id);
+            return result.DanhMucID;
         }
 
-        public bool delete(int id)
-        {
-            try
-            {
-                var entity = db.LoaiSanPhams.Find(id);
-                db.LoaiSanPhams.Remove(entity);
-                db.SaveChanges();
-                return true;
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-        }
 
-        public bool insert(LoaiSanPham loai)
-        {
-            try
-            {
-                db.LoaiSanPhams.Add(loai);
-                db.SaveChanges();
-                return true;
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-        }
-
-        public bool update(LoaiSanPham loai)
-        {
-            try
-            {
-                var loaisanpham = db.LoaiSanPhams.Find(loai.ID);
-                loaisanpham.TenLoai = loai.TenLoai;
-                db.SaveChanges();
-                return true;
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-        }
     }
 }

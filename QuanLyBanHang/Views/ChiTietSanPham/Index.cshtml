@@ -1,0 +1,219 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section cssHeader{
+    <link href="~/libs/plugins/thumbimage/ninja-slider.css" rel="stylesheet" />
+    <link href="~/libs/plugins/thumbimage/thumbnail-slider.css" rel="stylesheet" />
+    <style>
+        .page-wrapper {
+            height: 100%;
+        }
+
+        .product-detail-image {
+            width: 627px;
+        }
+
+        .product-detail-info {
+            width: 319px;
+        }
+
+        .product-link {
+            color: #333;
+            display: block;
+            max-height: 3em;
+            line-height: 1.5em;
+            overflow: hidden;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .description {
+            margin-top: 20px;
+            font-size: 0.9em;
+            line-height: 1.2em;
+            margin-bottom: 20px;
+        }
+
+            .description p, .description ul li {
+                margin: 0px;
+                font-size: 12px;
+                line-height: normal;
+                font-family: 'Helvetica Neue';
+                color: rgb(69, 69, 69);
+            }
+
+        .product-detail-addcart {
+            margin-bottom: 54px;
+        }
+
+        .btn-addcart {
+            padding: 5px 15px;
+            background: #eda6a6;
+            color: #fff;
+            width: auto;
+        }
+
+            .btn-addcart:hover {
+                color: #fff;
+                text-decoration: none;
+            }
+
+        .title-other-product {
+            color: #000;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .other-product-list {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+            .other-product-list li {
+                float: left;
+                display: inline;
+                width: 100px;
+                height: 100px;
+                margin-bottom: 10px;
+            }
+
+                .other-product-list li:nth-child(2n+1) {
+                    margin-right: 10px;
+                }
+
+                .other-product-list li a {
+                    display: block;
+                }
+
+                    .other-product-list li a img {
+                        width: 100px;
+                        height: 100px;
+                    }
+    </style>
+}
+
+@section jsFooter{
+    <script src="~/libs/plugins/thumbimage/ninja-slider.js"></script>
+    <script src="~/libs/plugins/thumbimage/thumbnail-slider.js"></script>
+}
+
+<!--start-->
+<div class="page-wrapper" style="margin:40px auto;">
+    <div class="product-detail-image float-left">
+        <div style="width:992px;">
+            <div id="ninja-slider" style="float:left;">
+                <div class="slider-inner">
+                    <ul>
+                        <li><a class="ns-img" href="/libs/Image/product/h4.jpg"></a></li>
+                        <li><a class="ns-img" href="/libs/Image/product/h2.jpg"></a></li>
+                        <li><a class="ns-img" href="/libs/Image/product/h3.jpg"></a></li>
+                        <li><a class="ns-img" href="/libs/Image/product/h4.jpg"></a></li>
+                        <li><a class="ns-img" href="/libs/Image/product/h2.jpg"></a></li>
+                        <li><a class="ns-img" href="/libs/Image/product/h3.jpg"></a></li>
+                        <li><a class="ns-img" href="/libs/Image/product/h4.jpg"></a></li>
+                        <li><a class="ns-img" href="/libs/Image/product/h2.jpg"></a></li>
+                        <li><a class="ns-img" href="/libs/Image/product/h3.jpg"></a></li>
+                    </ul>
+                    <div class="fs-icon" title="Expand/Close"></div>
+                </div>
+            </div>
+            <div id="thumbnail-slider" style="float:left;">
+                <div class="inner">
+                    <ul>
+                        <li>
+                            <a class="thumb" href="/libs/Image/product/h4.jpg"></a>
+                        </li>
+                        <li>
+                            <a class="thumb" href="/libs/Image/product/h2.jpg"></a>
+                        </li>
+                        <li>
+                            <a class="thumb" href="/libs/Image/product/h3.jpg"></a>
+                        </li>
+                        <li>
+                            <a class="thumb" href="/libs/Image/product/h4.jpg"></a>
+                        </li>
+                        <li>
+                            <a class="thumb" href="/libs/Image/product/h2.jpg"></a>
+                        </li>
+                        <li>
+                            <a class="thumb" href="/libs/Image/product/h3.jpg"></a>
+                        </li>
+                        <li>
+                            <a class="thumb" href="/libs/Image/product/h4.jpg"></a>
+                        </li>
+                        <li>
+                            <a class="thumb" href="/libs/Image/product/h2.jpg"></a>
+                        </li>
+                        <li>
+                            <a class="thumb" href="/libs/Image/product/h3.jpg"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div style="clear:both;"></div>
+        </div>
+    </div>
+    <div class="product-detail-info float-right">
+        <div class="product-name">
+            <a href="#" class="product-link">STRAPPY DRESS WITH BELT</a>
+            <span class="product-price">Price <span>970,000đ</span></span><br />
+            <span>Colour: Yellow | Teal</span><br />
+            <span>Size: Freesize</span>
+        </div>
+        <div class="description">
+            <p>*Chi Tiết</p>
+            <p>(cm)</p>
+            <p>*Chiều cao người mẫu: 170cm</p>
+            <ul>
+                <li>Ngực: 98</li>
+                <li>Nách: 48</li>
+                <li>Eo: 104</li>
+                <li>Mông: 132</li>
+                <li>Dài: 92</li>
+            </ul>
+            <p>- Giặt với nước lạnh</p>
+            <p>- Ủi ở chế độ nhỏ nhất</p>
+            <p>* Sản phẩm được sản xuất liên tục</p>
+        </div>
+        <div class="product-detail-addcart">
+            <a href="#" class="btn-addcart">Thêm vào giỏ hàng</a>
+        </div>
+        <div class="other-products">
+            <div class="other-products-wrapper">
+                <strong class="title-other-product">Các sản phẩm cùng loại</strong>
+                <ul class="other-product-list">
+                    <li>
+                        <a class="product-other-link" href="#">
+                            <img src="~/libs/Image/product/h2.jpg" alt="SHIRT WITH BOW ON SLEEVE" />
+
+                        </a>
+                    </li>
+                    <li>
+                        <a class="product-other-link" href="#">
+                            <img src="~/libs/Image/product/h3.jpg" alt="SHIRT WITH BOW ON SLEEVE" />
+
+                        </a>
+                    </li>
+                    <li>
+                        <a class="product-other-link" href="#">
+                            <img src="~/libs/Image/product/h4.jpg" alt="SHIRT WITH BOW ON SLEEVE" />
+
+                        </a>
+                    </li>
+                    <li>
+                        <a class="product-other-link" href="#">
+                            <img src="~/libs/Image/product/h2.jpg" alt="SHIRT WITH BOW ON SLEEVE" />
+
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+<!--end-->

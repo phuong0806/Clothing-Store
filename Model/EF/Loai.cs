@@ -6,20 +6,23 @@ namespace Model.EF
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("LoaiSanPham")]
-    public partial class LoaiSanPham
+    [Table("Loai")]
+    public partial class Loai
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public LoaiSanPham()
+        public Loai()
         {
             SanPhams = new HashSet<SanPham>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
 
         [StringLength(50)]
         public string TenLoai { get; set; }
+
+        public int? DanhMucID { get; set; }
+
+        public virtual DanhMuc DanhMuc { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SanPham> SanPhams { get; set; }

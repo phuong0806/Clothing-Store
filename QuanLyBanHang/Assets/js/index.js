@@ -1,8 +1,8 @@
 ﻿function ChangeToSlug() {
     var title, slug;
 
-    //Lấy text từ thẻ input title 
-    title = document.getElementById("title").value;
+    //Lấy text từ thẻ input title
+    title = document.getElementById("tensanpham").value;
 
     //Đổi chữ hoa thành chữ thường
     slug = title.toLowerCase();
@@ -29,7 +29,7 @@
     slug = '@' + slug + '@';
     slug = slug.replace(/\@\-|\-\@|\@/gi, '');
     //In slug ra textbox có id “slug”
-    document.getElementById('slug').value = slug;
+    document.getElementById('urlsanpham').value = slug;
 }
 
 $(document).on('click', '#delete-link', function () {
@@ -59,6 +59,75 @@ $(document).on('click', '#delete-link', function () {
         });
     }
 });
+
+
+$(document).ready(function () {
+
+    $('.hinh-anh').dblclick(function () {
+        var url = $(this).attr('src');
+        $('#result-images').append(`<div class="image"><img src="${url}" class="more-img" /><a href="#" class="remove-image">×</a></div>`);
+        $('.manage-image').css({ 'display': 'none', 'visibility': 'hidden' });
+        $('.background-black').css({ 'display': 'none', 'visibility': 'hidden' });
+        saveImage();
+    });
+
+    $(document).on('dblclick', '.remove-image', function () {
+        $(this).parent().remove();
+        saveImage();
+    })
+
+    $(document).on('click','.more-images',function () {
+        var SanPhamID = $(this).data('id');
+        $('#id-hidden').val(SanPhamID);
+        loadMoreImages(SanPhamID);
+    });
+
+    function resetModalMoreImage() {
+        $('#result-images').html(`<img src="/libs/Image/logo/add.png" id="btn-moreimages" class="more-img btn-chon-anh" />`);
+    }
+
+    function loadMoreImages(SanPhamID) {
+        resetModalMoreImage();
+        $.ajax({
+            url: "/Admin/SanPham/loadMoreImages",
+            type: "GET",
+            data: {
+                id: SanPhamID
+            },
+            dataType: "json",
+            success: function (response) {
+                var data = response.data;
+                var html = '';
+                $.each(data, function (i, item) {
+                    html += `<div class="image"><img src="${item}" class="more-img" /><a href="#" class="remove-image">×</a></div>`;
+                })
+                $('#result-images').append(html);
+            }
+        });
+    }
+
+    function saveImage() {
+        var images = [];
+        var id = $('#id-hidden').val();
+        $.each($('#result-images .image img'), function (i, item) {
+            images.push($(item).attr('src'));
+        })
+        $.ajax({
+            url: "/Admin/SanPham/SaveImages",
+            type: "POST",
+            data: {
+                id: id,
+                images: JSON.stringify(images)
+            },
+            dataType: "json",
+            success: function () {
+
+            }
+        });
+    }
+});
+
+
 
 /* MODAL IMAGE */
 $(function () {
@@ -104,7 +173,7 @@ $('.background-black').on('click', function () {
     $('.background-black').css({ 'display': 'none', 'visibility': 'hidden' });
 });
 
-$('.btn-chon-anh').on('click', function () {
+$(document).on('click','.btn-chon-anh', function () {
     $('.manage-image').css({ 'display': 'block', 'visibility': 'visible' });
     $('.background-black').css({ 'display': 'block', 'visibility': 'visible' });
 });

@@ -11,15 +11,15 @@ namespace Model.ViewModel
     {
         public int ID { get; set; }
 
+        public string Url { get; set; }
+
         public string TenSanPham { get; set; }
 
         public string MoTa { get; set; }
 
-        
         public int? Gia { get; set; }
 
         public string GiaString { get; set; }
-
        
         public string HinhAnh { get; set; }
 
@@ -35,8 +35,14 @@ namespace Model.ViewModel
 
         public string TenLoai { get; set; }
 
-        public string Mau { get; set; }
-        public string  KichCo { get; set; }
+        public int SoLuong { get; set; }
 
+        public int[] Mau { get; set; }
+
+        public int[] KichCo { get; set; }
+
+        public ICollection<Mau> MauCollection { get; set; }
+
+        public ICollection<KichCo> KichCoCollection { get; set; }
     }
 }

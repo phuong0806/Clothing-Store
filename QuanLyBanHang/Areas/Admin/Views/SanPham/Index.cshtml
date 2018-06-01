@@ -7,10 +7,58 @@
 }
 
 @section cssHeader {
+    <link href="~/libs/plugins/chosen.min.css" rel="stylesheet" />
     <link href="~/libs/css/sanpham.css" rel="stylesheet" />
+
+    <style>
+        .image {
+            position: relative;
+            display: inline-block;
+        }
+
+        .more-img {
+            width: 130px;
+            padding: 0px;
+            height: 130px;
+            border: 1px solid #ddd;
+            object-fit: contain;
+            margin-right: 19px;
+            margin-bottom: 19px;
+            background: #f5f5f5;
+        }
+
+        #btn-moreimages {
+        }
+
+        .remove-image {
+            position: absolute;
+            color: gray !important;
+            text-decoration: none !important;
+            right: 12px;
+            top: -6px;
+            font-size: 22px;
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            line-height: 11px;
+        }
+
+            .remove-image:hover {
+                background: red;
+                color: white !important;
+                border: 1px solid white;
+            }
+
+        #btn-moreimages:hover {
+            cursor: pointer;
+            transform: rotate(180deg);
+            animation-duration: 1s;
+        }
+    </style>
 }
 
 @section jsFooter {
+    <script src="~/libs/plugins/chosen.jquery.js"></script>
     <script src="~/libs/js/sanpham.js"></script>
 }
 
@@ -43,15 +91,26 @@
         {
             <tr>
                 <td>
-                    <img src="@item.HinhAnh" width="60px" />
+                    <img src="@item.HinhAnh" class="more-images" data-toggle="modal" data-target="#moreimages" data-id="@item.ID" />
                 </td>
                 <td class="text-left">@item.TenSanPham</td>
                 <td>@item.GiaString đ</td>
                 <td>@item.TenThuongHieu</td>
                 <td>@item.TenLoai</td>
-                <td>@item.Mau</td>
-                <td>@item.KichCo</td>
-                
+                <td>
+                    @foreach (var mau in item.MauCollection)
+                    {
+                        <label class="badge badge-danger" style="background-color:@mau.Code">@mau.Name</label>
+                    }
+
+                </td>
+                <td>
+                    @foreach (var kichco in item.KichCoCollection)
+                    {
+                        <label class="badge badge-secondary">@kichco.Name</label>
+                    }
+                </td>
+
                 <td>
                     <a class="btn btn-edit" data-id="@item.ID" data-toggle="modal" data-target="#myModal"><i class="ti-pencil-alt"></i></a>
                     <a class="btn btn-delete" data-id="@item.ID"><i class="ti-trash"></i></a>
@@ -64,7 +123,7 @@
 <!-- Button to Open the Modal -->
 <!-- The Modal -->
 <div class="modal" id="myModal">
-    <div class="modal-dialog" style="max-width:750px">
+    <div class="modal-dialog" style="max-width:800px">
         <div class="modal-content">
             <!-- Modal Header -->
             <div class="modal-header">
@@ -78,17 +137,25 @@
                         <div class="col-sm-12">
                             <div class="form-group">
                                 <label for="title">Tên Sản phẩm</label>
-                                <input type="text" class="form-control" name="TenSanPham" id="tensanpham"  />
+                                <input type="text" class="form-control" name="TenSanPham" id="tensanpham" onkeyup="ChangeToSlug()" />
+                                <span class="error"></span>
                                 <input type="hidden" class="form-control" value="0" name="id" id="id" />
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label for="title">Url</label>
+                                <input type="text" class="form-control" name="TenSanPham" id="urlsanpham" readonly />
+                                <input type="hidden" class="form-control" name="TenSanPham" id="urlCu" readonly />
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div>
                                 <div class="hinh-anh">
-                                    <img src="~/libs/Image/logo/add.png" name=""  id="hinhanh" class="img-selected btn-chon-anh" />
+                                    <img src="~/libs/Image/logo/add.png" name="" id="hinhanh" class="img-selected btn-chon-anh" />
                                 </div>
-                                <input type="hidden" name="HinhAnh" value="" id="img-book"/>
-                                <input type="hidden" name="fileImage" value="" id="fileImage"/>
+                                <input type="hidden" name="HinhAnh" value="" id="img-book" />
+                                <input type="hidden" name="fileImage" value="" id="fileImage" />
                                 <input id="upload" name="file" type="file" onchange="readURL(this);" style="display:none" />
                             </div>
                         </div>
@@ -100,14 +167,29 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="selLoai" class="col-sm-3">Loại</label>
+                                <label for="txtGia" class="col-sm-3">Số lượng</label>
+                                <div class="col-sm-9">
+                                    <input type="number" class="form-control" name="SoLuong" id="SoLuong">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="selLoai" class="col-sm-3">Danh mục</label>
+                                <div class="col-sm-9">
+                                    <select class="form-control" name="danhmuc" id="danhmuc">
+                                        <option value="selected" disabled selected>--Chọn danh mục sản phẩm--</option>
+                                        @foreach (var item in ViewBag.DanhMuc)
+                                        {
+                                            <option value="@item.ID">@item.TenDanhMuc</option>
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="selLoai" class="col-sm-3">Loại sản phẩm</label>
                                 <div class="col-sm-9">
                                     <select class="form-control" name="maloai" id="maloai">
-                                        <option value="selected" disabled>--Chọn loại--</option>
-                                        @foreach (var item in ViewBag.MaLoai)
-                                        {
-                                            <option value="@item.ID">@item.TenLoai</option>
-                                        }
+                                        <option value="selected" disabled selected>--Chọn loại sản phẩm--</option>
+                                        <!-- CODE LOAD JAVASCRIPT -->
                                     </select>
                                 </div>
                             </div>
@@ -126,38 +208,68 @@
                             <div class="form-group row">
                                 <label for="txtTenSanPham" class="col-sm-3">Màu</label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control" name="Mau" id="mau">
+                                    <select data-placeholder="Chọn màu..." id="mau" name="Mau" class="chosen-select form-control" multiple tabindex="4">
+                                        @foreach (var itemMau in ViewBag.Mau)
+                                        {
+                                            <option value="@itemMau.ID">@itemMau.Name</option>
+                                        }
+                                    </select>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="txtTenSanPham" class="col-sm-3">Kích cỡ</label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control" name="KichCo" id="kichco">
+                                    <select data-placeholder="Chọn kích cỡ..." id="kichco" name="KichCo" class="chosen-select form-control" multiple tabindex="4">
+                                        @foreach (var itemKichCo in ViewBag.KichCo)
+                                        {
+                                            <option value="@itemKichCo.ID">@itemKichCo.Name</option>
+                                        }
+                                    </select>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-12">
                             <div class="form-group">
                                 <label for="pwd">Mô Tả</label>
-                                <textarea id="fullDescription" name="MoTa"></textarea>
+                                <div id="fullDescription"></div>
                             </div>
-                            <script>CKEDITOR.replace("fullDescription")</script>
                         </div>
                     </div>
-                </div>
-                <!-- Modal footer -->
-                <div class="modal-footer">
-                    <button class="btn-save" style="width:100%">Lưu</button>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button class="btn-save" style="width:100%">Lưu</button>
+                    </div>
                 </div>
             </form>
         </div>
     </div>
 </div>
+
+<!-- MORE IMAGES -->
+<div class="modal fade bd-example-modal-lg" id="moreimages" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">QUẢN LÝ HÌNH ẢNH</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="id-hidden" name="name" value="" />
+                <div id="result-images">
+                    <img src="~/libs/Image/logo/add.png" id="btn-moreimages" class="more-img btn-chon-anh" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END MORE IMAGES -->
 <!-- IMAGE -->
 <div class="manage-image animated bounceInDown">
     <div class="row relative">
         <div><i class="ti-close background-black"></i></div>
-        <div class="col-sm-3 list-category-img">
+        <div class="col-sm-2 list-category-img">
             <a href="#" id="upload-link">Chọn ảnh</a>
             <div class="hinh-duoc-chon">
                 <img src="~/libs/Image/logo/add.png" class="img-selected" />
@@ -166,7 +278,7 @@
             <a href="#" id="delete-link"><i class="ti-trash" style="line-height:31px"></i></a>
             <a href="#" id="reset-link"><i class="ti-reload" style="line-height:31px"></i></a>
         </div>
-        <div class="col-sm-9 list-img">
+        <div class="col-sm-10 list-img">
             <div class="row search-box-img">
                 <input type="text" class="search-box" name="name" value="" />
                 <a href="#" class="btn-search"><i class="fa fa-search"></i></a>
@@ -174,7 +286,7 @@
             <div class="row" id="result">
                 @foreach (var item in listImage)
                 {
-                    <div class="col-sm-3 a-book">
+                    <div class="col-sm-2 a-book">
                         <img src="@item.path" class="hinh-anh" data-request-url="@Url.Action("deleteBook", "Book")" alt="Alternate Text" id="@item.name" />
                         <span class="ten-hinh-anh">@item.name</span>
                     </div>
@@ -184,3 +296,34 @@
     </div>
 </div>
 <!-- end IMAGE -->
+
+
+<div class="manage-image animated bounceInDown">
+    <div class="row relative">
+        <div><i class="ti-close background-black"></i></div>
+        <div class="col-sm-2 list-category-img">
+            <a href="#" id="upload-link">Chọn ảnh</a>
+            <div class="hinh-duoc-chon">
+                <img src="~/libs/Image/logo/add.png" class="img-selected" />
+                <span class="image-selected">...</span>
+            </div>
+            <a href="#" id="delete-link"><i class="ti-trash" style="line-height:31px"></i></a>
+            <a href="#" id="reset-link"><i class="ti-reload" style="line-height:31px"></i></a>
+        </div>
+        <div class="col-sm-10 list-img">
+            <div class="row search-box-img">
+                <input type="text" class="search-box" name="name" value="" />
+                <a href="#" class="btn-search"><i class="fa fa-search"></i></a>
+            </div>
+            <div class="row" id="result">
+                @foreach (var item in listImage)
+                {
+                    <div class="col-sm-2 a-book">
+                        <img src="@item.path" class="hinh-anh" data-request-url="@Url.Action("deleteBook", "Book")" alt="Alternate Text" id="@item.name" />
+                        <span class="ten-hinh-anh">@item.name</span>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

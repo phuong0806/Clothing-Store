@@ -52,20 +52,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\DanhMucDAO.cs" />
+    <Compile Include="DAO\KichCoDAO.cs" />
     <Compile Include="DAO\LoaiDAO.cs" />
+    <Compile Include="DAO\MauDAO.cs" />
     <Compile Include="DAO\SanPhamDAO.cs" />
     <Compile Include="DAO\ThuongHieuDAO.cs" />
     <Compile Include="EF\Admin.cs" />
+    <Compile Include="EF\DanhMuc.cs" />
     <Compile Include="EF\DonHang.cs" />
-    <Compile Include="EF\LoaiSanPham.cs" />
-    <Compile Include="EF\NguoiDung.cs" />
+    <Compile Include="EF\DonHang_SanPham.cs" />
+    <Compile Include="EF\KichCo.cs" />
+    <Compile Include="EF\Loai.cs" />
+    <Compile Include="EF\Mau.cs" />
     <Compile Include="EF\SanPham.cs" />
     <Compile Include="EF\StoreDbContext.cs" />
-    <Compile Include="EF\TaiKhoan.cs" />
-    <Compile Include="EF\ThongKe.cs" />
     <Compile Include="EF\ThuongHieu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\ImageViewModel.cs" />
+    <Compile Include="ViewModel\LoaiViewModel.cs" />
     <Compile Include="ViewModel\SanPhamViewModel.cs" />
   </ItemGroup>
   <ItemGroup />
