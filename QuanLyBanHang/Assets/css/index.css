@@ -74,6 +74,7 @@ button.btn-add:hover {
     border-color: #005cbf;
 }
 
-label.error {
+label.error, span.error {
     color:#ec3535;
 }
+

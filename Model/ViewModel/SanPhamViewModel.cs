@@ -11,15 +11,15 @@ namespace Model.ViewModel
     {
         public int ID { get; set; }
 
+        public string Url { get; set; }
+
         public string TenSanPham { get; set; }
 
         public string MoTa { get; set; }
 
-        
         public int? Gia { get; set; }
 
         public string GiaString { get; set; }
-
        
         public string HinhAnh { get; set; }
 
@@ -29,14 +29,24 @@ namespace Model.ViewModel
 
         public int? MaLoai { get; set; }
 
+        public int? DanhMucID { get; set; }
+
         public int? MaViTri { get; set; }
 
         public string TenThuongHieu { get; set; }
 
         public string TenLoai { get; set; }
 
-        public string Mau { get; set; }
-        public string  KichCo { get; set; }
+        public string AnhKhac { get; set; }
 
+        public int? SoLuong { get; set; }
+
+        public int[] Mau { get; set; }
+
+        public int[] KichCo { get; set; }
+
+        public IEnumerable<MauViewModel> MauCollection { get; set; }
+
+        public IEnumerable<KichCoViewModel> KichCoCollection { get; set; }
     }
 }

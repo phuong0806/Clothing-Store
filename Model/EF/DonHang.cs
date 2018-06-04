@@ -9,6 +9,12 @@ namespace Model.EF
     [Table("DonHang")]
     public partial class DonHang
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public DonHang()
+        {
+            DonHang_SanPham = new HashSet<DonHang_SanPham>();
+        }
+
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ID { get; set; }
 
@@ -24,12 +30,9 @@ namespace Model.EF
         [StringLength(50)]
         public string Email { get; set; }
 
-        [StringLength(10)]
-        public string SoLuong { get; set; }
+        public int? TongTien { get; set; }
 
-        [StringLength(50)]
-        public string MauSac { get; set; }
-
-        public int? MaSanPham { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DonHang_SanPham> DonHang_SanPham { get; set; }
     }
 }

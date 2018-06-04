@@ -1,11 +1,35 @@
-﻿/* MANAGE IMAGE */
+﻿#mau_chosen {
+    width: 100% !important;
+}
+
+.chosen-choices {
+    padding: 3px 10px !important;
+    border-radius: 4px !important;
+}
+
+#mau {
+    width: 100%;
+}
+
+#kichco_chosen {
+    width: 100% !important;
+}
+
+#kichco {
+    width: 100%;
+}
+
+.chosen-container.chosen-container-multi {
+    width: 100%;
+}
+
+/* MANAGE IMAGE */
 .manage-image {
     position: fixed;
-    width: 992px;
-    height: 580px;
-    top: 35px;
-    left: 50%;
-    margin-left: -496px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 15px;
     z-index: 999999999;
     visibility: hidden;
     display: none;
@@ -14,7 +38,7 @@
     .manage-image .relative {
         height: 100%;
         width: 100%;
-        padding: 10px;
+        /* padding: 10px; */
         background: #ddd;
     }
 
@@ -43,14 +67,14 @@
                 border: 1px solid #908a8a;
                 border-radius: 4px;
                 margin-left: 0px;
-                width: 680px;
+                width: 78%;
                 z-index: 3;
                 margin-top: 12px;
             }
 
                 .manage-image .relative .list-img .search-box-img .search-box {
                     position: absolute;
-                    width: 96%;
+                    width: 100%;
                     height: 100%;
                     border: none;
                     padding: 0px 10px;
@@ -75,16 +99,18 @@
 
             .manage-image .relative .list-img .a-book {
                 text-align: center;
+                height: 265px !important;
             }
 
                 .manage-image .relative .list-img .a-book .hinh-anh {
-                    width: 95%;
+                    width: 80%;
                     height: 160px;
                     margin-top: 10px;
                     padding: 6px;
                     border: 1px solid #908a8a;
                     cursor: pointer;
                     transition: 0.2s;
+                    object-fit: contain;
                 }
 
                     .manage-image .relative .list-img .a-book .hinh-anh:hover {
@@ -98,14 +124,19 @@
 
                 .manage-image .relative .list-img .a-book .ten-hinh-anh {
                     font-size: 13px;
+                    width: 141px;
+                    display: block;
+                    overflow-wrap: break-word;
                 }
 
 .hinh-anh {
     border: 1px solid #ddd;
-    height: 255px;
+    height: 342px;
+    width: 240px;
 }
 
     .hinh-anh img {
+        object-fit: contain;
         width: 100%;
         height: 100%;
     }
@@ -175,6 +206,7 @@
         margin-top: 8px;
         display: block;
         color: black;
+        overflow-wrap: break-word;
     }
 
     .hinh-duoc-chon img {
@@ -209,60 +241,60 @@
     right: 10px;
 }
 
-#reset-link {text-decoration: none;}
+#reset-link {
+    text-decoration: none;
+}
 
 
 .ti-close {
-        position: absolute;
-        right: 5px;
-        top: -13px;
-        font-size: 18px;
-        z-index: 9;
-        background: red;
-        color: white;
-        padding: 7px;
-        border-radius: 50%;
-        border: 1px solid white;
-        cursor: pointer;
+    position: absolute;
+    right: 22px;
+    top: 0px;
+    font-size: 18px;
+    z-index: 9;
+    color: gray;
+    padding: 9px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
 }
 /* end MANAGE IMAGE */
 
 .form-control:disabled, .form-control[readonly] {
-    background:#fafafa;
+    background: #fafafa;
 }
 
 .table thead th {
-
-border-bottom: none;
-
-color: #1379e6;
-
-background: #f9f9f9;
-
-border: none !important;
+    border-bottom: none;
+    color: #1379e6;
+    background: #f9f9f9;
+    border: none !important;
 }
 
 .table td {
-
-border: none;
-
-border-bottom: 1px solid #ddd;
+    border: none;
+    border-bottom: 1px solid #ddd;
 }
 
-.table td img {
-
-    width: 65px;
-    height: 65px;
+.table tr:nth-child(even) {
+    background: #f9f9f9;
 }
 
-.table td img {
+    .table td img {
+        width: 65px;
+        height: 65px;
+    }
 
-width: 65px;
-
-height: 65px;
-}
+    .table td img {
+        width: 65px;
+        height: 65px;
+        object-fit: contain;
+        cursor: pointer;
+        background: gray;
+    }
 
 
 .table {
-    border: 1px solid #ddd
+    border: 1px solid #ddd;
+    font-size: 14px;
 }

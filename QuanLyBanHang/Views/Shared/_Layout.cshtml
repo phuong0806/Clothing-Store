@@ -1,6 +1,5 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>CLOTHING</title>
@@ -17,6 +16,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700&amp;subset=vietnamese" rel="stylesheet">
     <!-- font chữ -->
     <link href="~/libs/css/index.css" rel="stylesheet" />
+
+    @RenderSection("cssHeader", required: false)
 </head>
 <body>
     <div id="page" class="content">
@@ -90,7 +91,7 @@
     <div class="container-fluid">
         <footer>
             <div class="row footer">
-                @*<div class="col-sm-1">
+                <div class="col-sm-1">
                     @*<img src="~/libs/Image/logo/logo.jpg" class="logo-footer" alt="">*@
                 </div>
                 <div class="col-sm-7">
@@ -124,6 +125,8 @@
             </div>
         </footer>
     </div>
-</body>
 
+    <!-- JS -->
+    @RenderSection("jsFooter", required: false)
+</body>
 </html>

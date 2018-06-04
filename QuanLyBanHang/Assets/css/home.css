@@ -1,0 +1,515 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+.sub-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    list-style-position: outside;
+    position: relative;
+    z-index: 100;
+    border: none;
+}
+
+.sub-menu {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.sub-menu ul li a {
+    font-family: 'proxima-nova-condensed-light', arial, serif;
+    display: block;
+    color: #000;
+    text-decoration: none;
+    /* height: 19px; */
+    text-transform: uppercase;
+    color: #eaaaaa;
+    padding: 0 25px;
+}
+
+.sub-menu ul li {
+    display: inline-block;
+    height: 69px;
+}
+
+.sub-menu-content {
+    
+}
+
+.sub-menu-content {
+    width: 935px;
+    float: left;
+}
+
+.sub-menu-content-wrapper {
+}
+
+.sub-menu-logo {
+    float:left;
+}
+
+.sub-menu-logo img {
+    width:59px;
+}
+
+.wrapper-menu.active {
+    display:block;
+}
+
+.wrapper-menu-fixed {
+    width: 1170px;
+    position: relative;
+    margin: 0 auto;
+    padding: 3px;
+}
+
+.wrapper-menu-fixed.active {
+    
+}
+
+.wrapper-menu {
+    
+display: none;
+    
+position: fixed;
+    
+top: 0px;
+    
+left: 0px;
+    
+z-index: 1000;
+    
+width: 100%;
+    
+background: #f5d9d9;
+    
+height: 63px;
+}
+
+.wrapper {
+	padding-top:40px;
+	padding-bottom:40px;
+}
+
+.text-footer {
+    padding-top:10px;
+    font-family: Helvetica, arial, Verdana, sans-serif;
+    font-size: 12.96px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 23px;
+    text-decoration: none solid rgb(203, 141, 140);
+    text-align: center;
+    text-indent: 0px;
+    text-transform: none;
+    vertical-align: baseline;
+    white-space: normal;
+    word-spacing: 0px;
+
+	/* Color & Background */
+    background-attachment: scroll;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: none;
+    background-position: 0% 0%;
+    background-repeat: repeat;
+    color: rgb(203, 141, 140);
+    padding-bottom: 20px;
+}
+
+.footer img {
+    width: 102px;
+    height: 84px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+} 
+
+
+.footer {
+    
+text-align: center;
+    
+background: #e2e1e7;
+}
+
+.main-page {
+}
+
+.shopnow-control {
+    padding: 0 129px;
+}
+
+.shopnow-title-wrapper {
+
+    padding: 0px 128px;
+
+    position: relative;
+
+    z-index: 25;
+}
+
+.shopnow-title::before {
+    content: "";
+    background: #f5d9d9;
+    height: 22px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+}
+
+.shopnow-title {
+
+    font-family: 'Cormorant Garamond', arial, helvetica, sans-serif;
+
+    font-size: 3.6em;
+
+    line-height: 1em;
+
+    font-style: italic;
+
+    text-transform: uppercase;
+
+    margin-bottom: 30px;
+
+    position: relative;
+
+    z-index: 20;
+}
+
+.shopnow-col2 {
+
+    float: right;
+
+    width: 540px;
+
+    height: 600px;
+    opacity:0;
+    animation-duration: 1s;
+}
+
+.shopnow-col1 {
+
+    float: left;
+
+    width: 630px;
+
+    opacity: 0;
+
+    animation-duration: 1s;
+}
+
+.shopnow-col2-wrapper {
+
+    position: relative;
+
+    top: 35%;
+
+    margin: 0 auto;
+
+    animation-duration: 1s;
+}
+
+html,
+body {
+}
+
+#page-main {
+    position: relative;
+    z-index: 60;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.aboutus-control {
+    padding: 0 102px;
+}
+
+.home-btn {
+    font-family: proxima-nova-condensed-light, arial, helvetica, sans-serif;
+    background: #f5d9d9;
+    padding: 5px 20px 5px 20px;
+    font-size: 0.85em;
+    letter-spacing: 1pt;
+    font-weight: bold;
+    color: #111;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.home-btn:hover {
+    color: #f5d9d9;
+    background: #5c4040;
+    text-decoration: none;
+}
+
+
+.aboutus-col1-wrapper {
+    top: 50%;
+    position: relative;
+}
+
+.aboutus-title-wrapper {
+    padding: 0 102px;
+    position: relative;
+    z-index: 25;
+}
+
+.aboutus-title {
+    font-family: 'Cormorant Garamond', arial, helvetica, sans-serif;
+    font-size: 3.9em;
+    line-height: 1em;
+    font-style: italic;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 20;
+}
+
+.aboutus-title::before {
+    content: "";
+    background: #f5d9d9;
+    height: 22px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    z-index: 1;
+}
+
+.aboutus-col1-wrapper {
+    height: 660px;
+    width: 540px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.header {
+    width: 100%;
+    height: 100%;
+}
+
+.page-main {
+    width: 1200px;
+    padding: 0 15px;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#machi-logo {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 0%;
+
+    margin-left: -107px;
+
+    z-index: 99;
+	opacity: 0.5;
+    animation: logoDown 1s forwards;
+}
+
+.header-main {
+    width: 100%;
+    height: 100vh;
+    background: url('../img/header-(5).jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.menu {
+
+    position: absolute;
+
+    top: 50%;
+
+    width: 100%;
+
+    text-align: center;
+
+    z-index: 11;
+}
+
+#line-menu-left {
+    background: url('../img/line-rent.png') no-repeat center center;
+    position: absolute;
+    background-size: cover;
+    z-index: 11;
+    top: 49%;
+    left: 0px;
+    width: 19%;
+    height: 1px;
+}
+
+#line-menu-right {
+    background: url('../img/line-rent.png') no-repeat center center;
+    position: absolute;
+    background-size: cover;
+    z-index: 11;
+    top: 49%;
+    right: 0px;
+    width: 19%;
+    height: 1px;
+}
+
+.menu ul {
+
+    margin: 0;
+
+    padding: 0;
+
+    list-style-type: none;
+
+    list-style-position: outside;
+
+    position: relative;
+
+    z-index: 100;
+
+    border: none;
+}
+
+.menu ul li {
+
+    display: inline-block;
+
+    width: auto;
+
+    text-align: center;
+}
+
+.menu ul li a {
+
+    padding: 6px 22px;
+
+    color: #e79f9f;
+
+    background: transparent;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    text-transform: uppercase;
+
+    font-family: helvetica, arial, helvetica, sans-serif;
+}
+
+.menu ul li a:hover {
+    background-color: #5c4040;
+}
+
+.main-header-footer {
+
+    position: absolute;
+
+    width: 100%;
+
+    bottom: 5%;
+}
+
+.main-footer {
+    width: 100%;
+}
+
+.main-footer-left {
+    width: 46%;
+}
+
+.main-footer-right {
+    width: 46%;
+}
+
+.main-footer-btn {
+    width: 8%;
+}
+
+.main-footer-left img {
+
+    width: 48px;
+
+    display: inline-block;
+    /* height: 39px; */
+
+    max-width: 100%;
+
+    height: auto;
+
+    box-sizing: border-box;
+
+    border: 0;
+
+    float: left;
+}
+
+.main-footer-left .text {
+
+    padding: 5px 0;
+
+    font-size: 0.6em;
+
+    line-height: 1.5em;
+
+    margin-left: 35px;
+
+    display: inline-block;
+
+    color: #e79f9f;
+}
+
+.header-btn-down {
+    position: absolute;
+    bottom: 10%;
+    left: calc((100% - 48px) / 2);
+    animation: bounce 2s infinite;
+    cursor: pointer;
+}
+
+.page-wrapper {
+    width: 1170px;
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.content {}
+
+.aboutus-col2 {
+    width: 630px;
+    float: right;
+    opacity:0;
+}
+
+.aboutus-col1 {
+    height: 660px;
+    width: 540px;
+    float: left;
+    opacity:0;
+    animation-duration: 1s;
+}
+
+.clear-fix {
+	clear:both;
+}
+
+@-webkit-keyframes logoDown {
+    from {top:0%;opacity: 0.5;}
+    to {top: 15%;opacity: 1;}
+}
+
+@-webkit-keyframes goRight {
+    0% { transform: translateX(-200px); opacity:0; }
+    100% { transform: translateX(0px); opacity:1; }
+}

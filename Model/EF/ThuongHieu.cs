@@ -15,7 +15,6 @@ namespace Model.EF
             SanPham = new HashSet<SanPham>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
 
         [StringLength(50)]

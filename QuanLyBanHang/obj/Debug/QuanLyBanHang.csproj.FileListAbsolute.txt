@@ -240,3 +240,8 @@ C:\Users\VTA\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin
 C:\Users\VTA\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\obj\Debug\QuanLyBanHang.csprojResolveAssemblyReference.cache
 C:\Users\VTA\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\obj\Debug\QuanLyBanHang.dll
 C:\Users\VTA\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\obj\Debug\QuanLyBanHang.pdb
+C:\Users\anhph\OneDrive\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\Jil.dll
+C:\Users\anhph\OneDrive\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\Sigil.dll
+C:\Users\anhph\OneDrive\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\Jil.pdb
+C:\Users\anhph\OneDrive\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\Jil.xml
+C:\Users\anhph\OneDrive\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\Sigil.xml

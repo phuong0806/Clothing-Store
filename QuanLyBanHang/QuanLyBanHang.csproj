@@ -52,6 +52,10 @@
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Jil, Version=2.15.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Jil.2.15.4\lib\net45\Jil.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -85,9 +89,14 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Sigil, Version=4.7.0.0, Culture=neutral, PublicKeyToken=2d06c3494341c8ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sigil.4.7.0\lib\net45\Sigil.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -157,10 +166,14 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\CommonController.cs" />
     <Compile Include="Areas\Admin\Controllers\DanhMucController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\LoaiController.cs" />
+    <Compile Include="Areas\Admin\Controllers\MauController.cs" />
     <Compile Include="Areas\Admin\Controllers\SanPhamController.cs" />
     <Compile Include="Areas\Admin\Controllers\ThuongHieuController.cs" />
+    <Compile Include="Controllers\ChiTietSanPhamController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SanPhamController.cs" />
     <Compile Include="Global.asax.cs">
@@ -169,7 +182,19 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\css\home.css" />
     <Content Include="Assets\css\index.css" />
+    <Content Include="Assets\img\aboutus-%2811%29.jpg" />
+    <Content Include="Assets\img\bag.png" />
+    <Content Include="Assets\img\btnviewcart.png" />
+    <Content Include="Assets\img\header-%285%29.jpg" />
+    <Content Include="Assets\img\line-rent.png" />
+    <Content Include="Assets\img\lookbook-%2814%29.jpg" />
+    <Content Include="Assets\img\ren-logo %281%29.png" />
+    <Content Include="Assets\img\ren-logo.png" />
+    <Content Include="Assets\img\ren-nav.png" />
+    <Content Include="Assets\js\home.js" />
+    <Content Include="Assets\sanpham.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Assets\js\index.js" />
@@ -191,11 +216,22 @@
     <Content Include="libs\Image\product\h2.jpg" />
     <Content Include="libs\Image\product\h3.jpg" />
     <Content Include="libs\Image\product\h4.jpg" />
+    <Content Include="libs\js\animate.css" />
     <Content Include="libs\js\danhmuc.js" />
     <Content Include="libs\js\loginAdmin.js" />
+    <Content Include="libs\js\mau.js" />
     <Content Include="libs\js\sanpham.js" />
     <Content Include="libs\js\thuonghieu.js" />
+    <Content Include="libs\plugins\chosen-sprite%402x.png" />
+    <Content Include="libs\plugins\chosen-sprite.png" />
+    <Content Include="libs\plugins\chosen.jquery.js" />
+    <Content Include="libs\plugins\chosen.min.css" />
+    <Content Include="libs\plugins\jscolor.js" />
     <Content Include="libs\plugins\notify.min.js" />
+    <Content Include="libs\plugins\thumbimage\ninja-slider.css" />
+    <Content Include="libs\plugins\thumbimage\ninja-slider.js" />
+    <Content Include="libs\plugins\thumbimage\thumbnail-slider.css" />
+    <Content Include="libs\plugins\thumbimage\thumbnail-slider.js" />
     <Content Include="libs\theme\ckeditor\adapters\jquery.js" />
     <Content Include="libs\theme\ckeditor\build-config.js" />
     <Content Include="libs\theme\ckeditor\ckeditor.js" />
@@ -909,6 +945,8 @@
     <Content Include="Areas\Admin\Views\Home\Login.cshtml" />
     <Content Include="Areas\Admin\Views\DanhMuc\Index.cshtml" />
     <Content Include="Areas\Admin\Views\ThuongHieu\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Loai\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Mau\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -922,7 +960,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -936,10 +976,12 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\SanPham\Index.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\SanPham\ChiTietSanPham.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Admin\Views\Common\" />
     <Folder Include="libs\theme\ckfinder\" />
     <Folder Include="Models\" />
     <Folder Include="Views\Member\" />

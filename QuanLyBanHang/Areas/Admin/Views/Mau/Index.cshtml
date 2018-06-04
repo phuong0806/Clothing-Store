@@ -1,0 +1,101 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    var DanhSachMau = ViewBag.DanhSachMau;
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@section cssHeader {
+    <style>
+        .color-picker {
+            height: 40px;
+            width: 40px;
+            background: red;
+            border: 1px solid gray;
+        }
+
+        table tr td {
+            vertical-align:middle !important;
+        }
+    </style>
+}
+
+@section jsFooter {
+    <script src="~/libs/plugins/jscolor.js"></script>
+    <script src="~/libs/js/mau.js"></script>
+}
+
+<h1>DANH SÁCH MÀU</h1>
+<div class="row mb-2">
+    <div class="col-sm-12">
+        <div class="float-left">
+            <input type="text" name="name" class="search-box" value="" placeholder="Search..." />
+        </div>
+        <div class="float-right">
+            <a class="my-btn btn-add" data-toggle="modal" data-target="#myModal">Thêm màu mới</a>
+        </div>
+    </div>
+</div>
+<table class="table" style="text-align:center">
+    <thead style="background:#ddd">
+        <tr>
+            <th scope="col" width="7%"></th>
+            <th scope="col" width="18%" class="text-left">Name</th>
+            <th scope="col" width="60%" class="text-left">Code</th>
+            <th scope="col" width="15%"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in DanhSachMau)
+        {
+            <tr>
+                <td class="text-center">
+                   <div class="color-picker" style="background-color:@item.Code"></div>
+                </td>
+                <td class="text-left">@item.Name</td>
+                <td class="text-left">@item.Code</td>
+                <td>
+                    <a class="btn btn-edit" data-id="@item.ID" data-toggle="modal" data-target="#myModal"><i class="ti-pencil-alt"></i></a>
+                    <a class="btn btn-delete" data-id="@item.ID"><i class="ti-trash"></i></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<!-- Button to Open the Modal -->
+<!-- The Modal -->
+<div class="modal" id="myModal">
+    <div class="modal-dialog" style="max-width:650px">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title"> MÀU SẮC </h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <!-- Modal body -->
+            <form id="form-save" enctype="multipart/form-data">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label for="title">Màu</label>
+                                <input type="text" class="form-control" name="tenmau" id="tenmau" />
+                                <input type="hidden" class="form-control" value="0" name="id" id="id" />
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label for="title">Code</label>
+                                <input type="text" value="FFFFFF" class="form-control jscolor {width:557, height:150, position:'bottom',borderColor:'#FFF', insetColor:'#FFF', backgroundColor:'#666'}" name="code" id="code" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button class="btn-save" style="width:100%">Lưu</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

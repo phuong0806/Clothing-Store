@@ -18,6 +18,7 @@ namespace QuanLyBanHang.Areas.Admin.Controllers
             ViewBag.danhSachDanhMuc = new DanhMucDAO().getDanhMuc();
             return View();
         }
+<<<<<<< HEAD
 
         public JsonResult layDanhMuc(int id)
         {
@@ -63,5 +64,7 @@ namespace QuanLyBanHang.Areas.Admin.Controllers
                 status = new DanhMucDAO().delete(id)
             });
         }
+=======
+>>>>>>> e21535ef34dc1c16d6989a9a77fa6a21967d8bf5
     }
 }
