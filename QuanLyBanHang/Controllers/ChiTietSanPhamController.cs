@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Model.DAO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,6 +13,15 @@ namespace QuanLyBanHang.Controllers
         public ActionResult Index()
         {
             return View();
+        }
+
+        public JsonResult loadMoreImages(int id)
+        {
+            return Json(new
+            {
+                data = new SanPhamDAO().loadMoreImages(id)
+            },
+           JsonRequestBehavior.AllowGet);
         }
     }
 }

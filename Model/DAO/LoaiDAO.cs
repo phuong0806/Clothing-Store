@@ -1,4 +1,5 @@
 ﻿using Model.EF;
+using Model.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,15 +17,29 @@ namespace Model.DAO
             db = new StoreDbContext();
         }
 
-        public List<Loai> getTatCaLoai()
+        public IEnumerable<LoaiViewModel> getDanhSach()
         {
-            var model = db.Loais.ToList();
-            return model;
+            var result = (from loai in db.Loais
+                          select new LoaiViewModel
+                          {
+                              ID = loai.ID,
+                              TenLoai = loai.TenLoai,
+                              DanhMucID = loai.DanhMucID
+                              
+                          }).ToList();
+
+            return result;
         }
 
-        public List<Loai> layDanhSachLoaiTheoID(int DanhMucID)
+        public IEnumerable<LoaiViewModel> layDanhSachLoaiTheoID(int DanhMucID)
         {
-            var model = db.Loais.Where(x => x.DanhMucID == DanhMucID).ToList();
+            var model = (from loai in db.Loais
+                         where loai.DanhMucID == DanhMucID
+                         select new LoaiViewModel
+                         {
+                             ID = loai.ID,
+                             TenLoai = loai.TenLoai
+                         }).ToList();
             return model;
         }
 

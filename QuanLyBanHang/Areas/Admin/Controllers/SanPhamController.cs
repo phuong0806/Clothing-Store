@@ -1,4 +1,5 @@
 ﻿using Common;
+using Jil;
 using Model.DAO;
 using Model.EF;
 using Model.ViewModel;
@@ -35,15 +36,15 @@ namespace QuanLyBanHang.Areas.Admin.Controllers
 
             ViewBag.listImage = ImageHelper.loadListImage();//lay danh sach hinh anh
 
-            ViewBag.MaLoai = l.getTatCaLoai();//lay tat cac cac loai
+            ViewBag.MaLoai = l.getDanhSach();//lay tat cac cac loai ---giai quyet
 
             ViewBag.MaThuongHieu = th.getTatCaThuongHieu();  //lay thuong hieu
 
             ViewBag.DanhSachSanPham = spDAO.layDanhSachTatCaSanPham(); //lay tat ca sp
 
-            ViewBag.Mau = m.layDanhSachMau();  //lat tat ca mau 
+            ViewBag.Mau = m.getDanhSach();  //lat tat ca mau 
 
-            ViewBag.KichCo = kc.getDanhSachKichCo();  //lat tat ca mau 
+            ViewBag.KichCo = kc.getDanhSach();  //lat tat ca mau 
 
             ViewBag.DanhMuc = dm.getDanhMuc(); // lấy tất cả danh mục
 
@@ -67,18 +68,17 @@ namespace QuanLyBanHang.Areas.Admin.Controllers
         [HttpGet]
         public JsonResult layChiTietSanPham(int id)
         {
-            var model = new SanPhamDAO().laySanPhamTheoID(id);
+            var sanPham = new SanPhamDAO().laySanPhamTheoID(id);
 
-            var output = JsonConvert.SerializeObject(model, 
-                            new JsonSerializerSettings
-                            {
-                                ReferenceLoopHandling = ReferenceLoopHandling.Ignore
-                            });
+            var mau = new MauDAO().getDanhSachTheoSanPham(id);
+
+            var kichCo = new KichCoDAO().getDanhSachTheoSanPham(id);
 
             return Json(new
             {
-                DanhMucID = new DanhMucDAO().layIdDanhMucTheoLoai(model.MaLoai),
-                data = output
+                SanPham = sanPham,
+                Mau = mau,
+                KichCo = kichCo
             }, JsonRequestBehavior.AllowGet);
         }
 
@@ -123,13 +123,17 @@ namespace QuanLyBanHang.Areas.Admin.Controllers
         public JsonResult LayLoaiSanPham(int DanhMucID)
         {
             var list = new LoaiDAO().layDanhSachLoaiTheoID(DanhMucID);
-            
+
             var output = JsonConvert.SerializeObject(list, new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
 
-            return Json(new
+            var jsonResult = Json(new
             {
                 data = output
             }, JsonRequestBehavior.AllowGet);
+
+            jsonResult.MaxJsonLength = int.MaxValue;
+
+            return jsonResult;
         }
 
         public JsonResult SaveImages(int id, string images)
@@ -165,29 +169,11 @@ namespace QuanLyBanHang.Areas.Admin.Controllers
 
         public JsonResult loadMoreImages(int id)
         {
-            var sp = new SanPhamDAO().laySanPhamTheoID(id);
-
-            if (sp.AnhKhac == null || sp.AnhKhac == "")
-            {
-                return Json(new
-                {
-                    data = ""
-                }, JsonRequestBehavior.AllowGet);
-            }
-
-            XElement xImages = XElement.Parse(sp.AnhKhac);
-
-            List<string> listImageReturn = new List<string>();
-
-            foreach (XElement element in xImages.Elements())
-            {
-                listImageReturn.Add(element.Value);
-            }
-
             return Json(new
             {
-                data = listImageReturn
-            }, JsonRequestBehavior.AllowGet);
+                data = new SanPhamDAO().loadMoreImages(id)
+            },
+            JsonRequestBehavior.AllowGet);
         }
     }
 }

@@ -21,5 +21,16 @@ namespace QuanLyBanHang.Controllers
             SanPhamDAO sp = new SanPhamDAO();
             ViewBag.DanhSachSanPham = sp.layDanhSachTatCaSanPham();
         }
+
+        public ActionResult ChiTietSanPham(string url)
+        {
+            SanPhamDAO sp = new SanPhamDAO();
+
+            var model = sp.laySanPhamTheoURL(url);
+
+            ViewBag.DanhSachHinhAnh = sp.loadMoreImages(model.ID);
+
+            return View(model);
+        }
     }
 }

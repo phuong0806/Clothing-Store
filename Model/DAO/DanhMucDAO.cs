@@ -23,7 +23,6 @@ namespace Model.DAO
             return list;
         }
 
-
         public int? layIdDanhMucTheoLoai(int? id)
         {
             var result = db.Loais.Find(id);

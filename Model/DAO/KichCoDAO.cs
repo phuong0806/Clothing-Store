@@ -1,4 +1,5 @@
 ﻿using Model.EF;
+using Model.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,10 +17,29 @@ namespace Model.DAO
             db = new StoreDbContext();
         }
 
-        public List<KichCo> getDanhSachKichCo()
+        public IEnumerable<KichCoViewModel> getDanhSach()
         {
-            var list = db.KichCoes.ToList();
-            return list;
+            var result = (from kichco in db.KichCoes
+                          select new KichCoViewModel
+                          {
+                              ID = kichco.ID,
+                              Name = kichco.Name,
+                          }).ToList();
+
+            return result;
+        }
+
+        public IEnumerable<KichCoViewModel> getDanhSachTheoSanPham(int SanPhamID)
+        {
+            var result = (from kichco in db.KichCoes
+                          where kichco.SanPhams.Any(x => x.ID == SanPhamID)
+                          select new KichCoViewModel
+                          {
+                              ID = kichco.ID,
+                              Name = kichco.Name,
+                          }).ToList();
+
+            return result;
         }
     }
 }

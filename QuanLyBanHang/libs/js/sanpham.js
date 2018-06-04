@@ -89,8 +89,6 @@
         $('#hinhanh').attr('src',"/libs/Image/logo/add.png");
         $('#gia').val("");
         $('#danhmuc').val("selected");
-        var html = '<option disabled selected>--Chọn loại sản phẩm--</option>';
-        $('#maloai').html(html);
         $('#thuonghieu').val("selected");
         $('#mau').val("");
         $('#urlsanpham').val("");
@@ -99,6 +97,7 @@
         $('#SoLuong').val("");
         $("#mau").trigger("chosen:updated");
         $("#kichco").trigger("chosen:updated");
+        $('#maloai').html('<option disabled selected>--Chọn loại sản phẩm--</option>');
     }
 
     // Thêm và Cập nhật sản phẩm
@@ -185,33 +184,42 @@
             data: {
                 id: idSanPham
             },
-            type: "GET",
             async: false,
+            type: "GET",
             datatype: "json",
             contentType: "application/json; charset=utf-8",
-            success: function (result) {
+            success: function (response) {
                 resetModal();
-                var data = JSON.parse(result.data);
-                $('#tensanpham').val(data.TenSanPham);
-                $('#hinhanh').attr('src', data.HinhAnh);
-                $('#urlsanpham').val(data.Url);
-                $('#urlCu').val(data.Url);
-                $('#gia').val(data.Gia);
-                $('#danhmuc').val(result.DanhMucID);
-                $('#thuonghieu').val(data.MaThuongHieu);
-                $('#SoLuong').val(data.SoLuong);
-                $('#id').val(data.ID);
-                loadLoaiSanPhamTheoID(result.DanhMucID);
-                $('#maloai').val(data.MaLoai);
-                CKEDITOR.instances.fullDescription.setData(data.MoTa);
+                var SanPham = response.SanPham;
+                var Mau = response.Mau;
+                var KichCo = response.KichCo;
+                console.log(SanPham);
+                $('#tensanpham').val(SanPham.TenSanPham);
+                $('#hinhanh').attr('src', SanPham.HinhAnh);
+                $('#urlsanpham').val(SanPham.Url);
+                $('#urlCu').val(SanPham.Url);
+                $('#gia').val(SanPham.Gia);
+                $('#danhmuc').val(SanPham.DanhMucID);
+                $('#thuonghieu').val(SanPham.MaThuongHieu);
+                $('#SoLuong').val(SanPham.SoLuong);
+                $('#id').val(SanPham.ID);
 
-                $.each(data.Maus, function (i, item) {
+                loadLoaiSanPhamTheoID(SanPham.DanhMucID);
+
+                setTimeout(function () {
+                    $('#maloai').val(SanPham.MaLoai);
+                }, 1);
+
+                CKEDITOR.instances.fullDescription.setData(SanPham.MoTa);
+
+                $.each(Mau, function (i, item) {
                     $("#mau option[value='" + item.ID + "']").prop("selected", true);
                 });
-                
-                $.each(data.KichCoes, function (i, item) {
+
+                $.each(KichCo, function (i, item) {
                     $("#kichco option[value='" + item.ID + "']").prop("selected", true);
                 });
+
                 $("#mau").trigger("chosen:updated");
                 $("#kichco").trigger("chosen:updated");
             }

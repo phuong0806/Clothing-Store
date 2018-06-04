@@ -73,7 +73,7 @@ Fp/* HEADER */
 }
 
 .menu-top ul li a:hover {
-    color: #E51B23;
+    color: #eda6a6;
 }
 
 .menu-top ul li a {
@@ -101,7 +101,7 @@ Fp/* HEADER */
 }
 
 .child-bread-crum.active {
-    color: #E51B23;
+    color: #eda6a6;
 }
 
 .bread-crum a {
@@ -182,11 +182,11 @@ Fp/* HEADER */
 }
 
 .menu-bottom ul li a.active {
-    color: #E51B23;
+    color: #eda6a6;
 }
 
 .menu-bottom ul li a:hover {
-    color: #E51B23;
+    color: #eda6a6;
 }
 
 .menu-bottom ul li a {
@@ -226,9 +226,13 @@ Fp/* HEADER */
 
 .a-product .top img {
 
-width: 221px;
+width: 220px;
 
-height: 331px;
+height: 320px;
+
+box-sizing: border-box;
+
+object-fit: cover;
 }
 
 .a-product .bot {
@@ -305,13 +309,13 @@ width: 100%;
 
 .pagination ul li a {
 
-    padding: 5px 10px;
+padding: 5px 10px;
 
-    background: #E51B23;
+background: #eda6a6;
 
-    color: white;
+color: white;
 
-    border-radius: 2px;
+border-radius: 2px;
 }
 
 
