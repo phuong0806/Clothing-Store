@@ -7,12 +7,11 @@
 <div class="row">
     @foreach (var item in ViewBag.DanhSachSanPham)
     {
-                        <!-- A PRODUCT -->
+        <!-- A PRODUCT -->
         <div class="col-sm-3 a-product">
             <div class="top">
                 <a href="">
-                   
-                    <img src="~/libs/Image/product/h3.jpg" />
+                    <img src="@item.HinhAnh" />
                 </a>
             </div>
             <div class="bot">
@@ -22,7 +21,7 @@
                 <div class="size">Size: @item.KichCo</div>
             </div>
         </div>
-                    <!-- END PRODUCT -->
+        <!-- END PRODUCT -->
     }
 </div>
 <div class="row">

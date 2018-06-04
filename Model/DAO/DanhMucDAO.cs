@@ -19,13 +19,13 @@ namespace Model.DAO
 
         public List<LoaiSanPham> getDanhMuc()
         {
-            var list = db.LoaiSanPhams.ToList();
+            var list = db.LoaiSanPham.ToList();
             return list;
         }
 
         public LoaiSanPham layDanhMucTheoID(int id)
         {
-            var entity = db.LoaiSanPhams.Find(id);
+            var entity = db.LoaiSanPham.Find(id);
             return entity;
         }
 
@@ -33,8 +33,8 @@ namespace Model.DAO
         {
             try
             {
-                var entity = db.LoaiSanPhams.Find(id);
-                db.LoaiSanPhams.Remove(entity);
+                var entity = db.LoaiSanPham.Find(id);
+                db.LoaiSanPham.Remove(entity);
                 db.SaveChanges();
                 return true;
             }
@@ -48,7 +48,7 @@ namespace Model.DAO
         {
             try
             {
-                db.LoaiSanPhams.Add(loai);
+                db.LoaiSanPham.Add(loai);
                 db.SaveChanges();
                 return true;
             }
@@ -62,7 +62,7 @@ namespace Model.DAO
         {
             try
             {
-                var loaisanpham = db.LoaiSanPhams.Find(loai.ID);
+                var loaisanpham = db.LoaiSanPham.Find(loai.ID);
                 loaisanpham.TenLoai = loai.TenLoai;
                 db.SaveChanges();
                 return true;

@@ -18,7 +18,6 @@
     <!-- font chữ -->
     <link href="~/libs/css/index.css" rel="stylesheet" />
 </head>
-
 <body>
     <div id="page" class="content">
         <header>
@@ -65,14 +64,18 @@
                 <div class="col-sm-12">
                     <div class="menu-bottom">
                         <ul>
-                            <li><a href="" class="active">New Arrivals</a></li>
+                            @foreach (var item in ViewBag.DanhMucSanPham)
+                            {
+                                <li><a href="">@item.TenLoai</a></li>
+                            }
+                            @*<li><a href="" class="active">New Arrivals</a></li>
                             <li><a href="">TOP</a></li>
                             <li><a href="">Shirt</a></li>
                             <li><a href="">Dress</a></li>
                             <li><a href="">Vest</a></li>
                             <li><a href="">Skirt/Shorts</a></li>
                             <li><a href="">Pants</a></li>
-                            <li><a href="">Signature Line</a></li>
+                            <li><a href="">Signature Line</a></li>*@
                         </ul>
                     </div>
                 </div>

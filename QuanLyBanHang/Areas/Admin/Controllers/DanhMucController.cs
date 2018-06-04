@@ -55,6 +55,7 @@ namespace QuanLyBanHang.Areas.Admin.Controllers
             }
         }
 
+        [HttpPost]
         public JsonResult Delete(int id)
         {
             return Json(new

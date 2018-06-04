@@ -24,7 +24,7 @@ namespace QuanLyBanHang.Areas.Admin.Controllers
         [HttpPost]
         public ActionResult Login(string username, string password)
         {
-            var user = db.Admins.Find(username);
+            var user = db.Admin.Find(username);
             if (user != null)
             {
                 if (user.MatKhauAD == password)
