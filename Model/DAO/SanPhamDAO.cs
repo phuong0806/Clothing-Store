@@ -58,9 +58,15 @@ namespace Model.DAO
 
         public IEnumerable<SanPhamViewModel> layDanhSachTatCaSanPham()
         {
+<<<<<<< HEAD
+            var model = (from sp in db.SanPham
+                         join l in db.LoaiSanPham on sp.MaLoai equals l.ID
+                         join th in db.ThuongHieu on sp.MaThuongHieu equals th.ID
+=======
             var model = (from sp in db.SanPhams
                          join l in db.Loais on sp.MaLoai equals l.ID
                          join th in db.ThuongHieux on sp.MaThuongHieu equals th.ID
+>>>>>>> e21535ef34dc1c16d6989a9a77fa6a21967d8bf5
                          select new SanPhamViewModel
                          {
                              ID = sp.ID,
@@ -88,6 +94,9 @@ namespace Model.DAO
 
         public void UpdateSaveImages(int id, string images)
         {
+<<<<<<< HEAD
+            var model = db.SanPham.Find(id);
+=======
             var sp = db.SanPhams.Find(id);
             sp.AnhKhac = images;
             db.SaveChanges();
@@ -139,6 +148,7 @@ namespace Model.DAO
                          }).SingleOrDefault();
             CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");   // try with "en-US"
             model.GiaString = double.Parse(model.Gia.ToString()).ToString("#,###", cul.NumberFormat);
+>>>>>>> e21535ef34dc1c16d6989a9a77fa6a21967d8bf5
             return model;
         }
 
@@ -147,6 +157,10 @@ namespace Model.DAO
             // Nếu thêm thành công thì trả về true ngược lại thì false
             try
             {
+<<<<<<< HEAD
+                db.SanPham.Add(sp);
+                db.SaveChanges();
+=======
                 if (checkExistUrl(sp.Url))
                 {
                     return false;
@@ -180,6 +194,7 @@ namespace Model.DAO
                 db.SanPhams.Add(SanPhamNew); // Thêm sản phẩm
                 db.SaveChanges(); // Lưu lại sản phẩm đã thêm
 
+>>>>>>> e21535ef34dc1c16d6989a9a77fa6a21967d8bf5
                 return true;
             }
             catch (Exception)
@@ -194,6 +209,17 @@ namespace Model.DAO
         {
             try
             {
+<<<<<<< HEAD
+                var entity = db.SanPham.Find(sp.ID);
+                entity.TenSanPham = sp.TenSanPham;
+                entity.MoTa = sp.MoTa;
+                entity.MaLoai = sp.MaLoai;
+                entity.MaThuongHieu = sp.MaThuongHieu;
+                entity.HinhAnh = sp.HinhAnh;
+                entity.Mau = sp.Mau;
+                entity.KichCo = sp.KichCo;
+                entity.Gia = sp.Gia;
+=======
                 if (kiemTraUrl(sp.Url, sp.ID))
                 {
                     return false;
@@ -232,6 +258,7 @@ namespace Model.DAO
                     insertKichCo(SanPhamUpdate, id);
                 }
 
+>>>>>>> e21535ef34dc1c16d6989a9a77fa6a21967d8bf5
                 db.SaveChanges();
                 return true;
             }
@@ -255,6 +282,10 @@ namespace Model.DAO
         {
             try
             {
+<<<<<<< HEAD
+                var entity = db.SanPham.Find(id);
+                db.SanPham.Remove(entity);
+=======
                 var SanPham = db.SanPhams.FirstOrDefault(x => x.ID == id);
 
                 //Xóa hết dữ liệu của sản phẩm trong bảng Mau_SanPham
@@ -270,6 +301,7 @@ namespace Model.DAO
                 }
 
                 db.SanPhams.Remove(SanPham);
+>>>>>>> e21535ef34dc1c16d6989a9a77fa6a21967d8bf5
                 db.SaveChanges();
                 return true;
             }

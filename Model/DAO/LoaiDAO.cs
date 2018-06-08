@@ -19,6 +19,9 @@ namespace Model.DAO
 
         public IEnumerable<LoaiViewModel> getDanhSach()
         {
+<<<<<<< HEAD
+            var model = db.LoaiSanPham.ToList();
+=======
             var result = (from loai in db.Loais
                           select new LoaiViewModel
                           {
@@ -40,6 +43,7 @@ namespace Model.DAO
                              ID = loai.ID,
                              TenLoai = loai.TenLoai
                          }).ToList();
+>>>>>>> e21535ef34dc1c16d6989a9a77fa6a21967d8bf5
             return model;
         }
 

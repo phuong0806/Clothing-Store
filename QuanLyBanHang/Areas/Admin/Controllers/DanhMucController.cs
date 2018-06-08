@@ -18,5 +18,53 @@ namespace QuanLyBanHang.Areas.Admin.Controllers
             ViewBag.danhSachDanhMuc = new DanhMucDAO().getDanhMuc();
             return View();
         }
+<<<<<<< HEAD
+
+        public JsonResult layDanhMuc(int id)
+        {
+
+            var output = JsonConvert.SerializeObject(new DanhMucDAO().layDanhMucTheoID(id),
+                            new JsonSerializerSettings
+                            {
+                                ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+                            });
+
+            return Json(new
+            {
+                data = output
+            }, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpPost]
+        public JsonResult Save(LoaiSanPham loaisanpham)
+        {
+            if (loaisanpham.ID > 0)
+            {
+                return Json(new
+                {
+                    //them danh muc
+                    status = new DanhMucDAO().update(loaisanpham)
+                });
+            }
+            else
+            {
+                return Json(new
+                {
+                    //cap nhat danh muc
+                    status = new DanhMucDAO().insert(loaisanpham)
+                });
+            }
+        }
+
+        [HttpPost]
+        public JsonResult Delete(int id)
+        {
+            return Json(new
+            {
+                status = new DanhMucDAO().delete(id)
+            });
+        }
+=======
+>>>>>>> e21535ef34dc1c16d6989a9a77fa6a21967d8bf5
     }
 }

@@ -12,7 +12,13 @@ namespace QuanLyBanHang.Areas.Admin.Controllers
     public class ThuongHieuController : Controller
     {
         // GET: Admin/ThuongHieu
+        // no tra ve Get du lieu, hom ray tui chi la Post.
+        //Ham nay la mac dinh phai co
+        //no tra ve return view
         public ActionResult Index()
+            // no su dung view bag, hay view data de truyen vao vao view. hieu khong?hieu  noi nghe coi view bag, view data lam sao?dang giai tich cho t ma sao hoi lai tui dạ, noi hieu ma? thi ong noi vay t hieu vayhihi
+            //ne qua demo ne
+
         {
             ViewBag.danhSachThuongHieu = new ThuongHieuDAO().getTatCaThuongHieu();
             return View();
