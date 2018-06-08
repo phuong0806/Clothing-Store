@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "Đơn hàng";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@section jsFooter {
+    <script src="~/Assets/js/donhang.js"></script>
+}
+
+<h1>DANH SÁCH ĐƠN HÀNG</h1>
+<div class="row mb-2">
+    <div class="col-sm-12">
+        <div class="float-left">
+            <input type="text" name="name" class="search-box" value="" placeholder="Search..." />
+        </div>
+        <div class="float-right">
+            <a class="my-btn btn-add" data-toggle="modal" data-target="#myModal">Export</a>
+        </div>
+    </div>
+</div>
+<table class="table" style="text-align:center">
+    <thead style="background:#ddd">
+        <tr>
+            <th scope="col" width="10%" class="text-left">Đơn hàng</th>
+            <th scope="col" width="15%">Ngày tạo</th>
+            <th scope="col" width="15%">Ngày duyệt</th>
+            <th scope="col" width="15%">Ngày hoàn thành</th>
+            <th scope="col" width="15%">Tình trạng</th>
+            <th scope="col" width="15%">Tổng tiền</th>
+            <th scope="col" width="15%"></th>
+        </tr>
+    </thead>
+    <tbody id="result-data">
+        
+    </tbody>
+</table>
+
+
+<script id="data-template" type="x-tmpl-mustache">
+    <tr>
+        <td class="text-left"><a href="#">#{{DonHang}}</a></td>
+        <td>{{NgayTao}}</td>
+        <td>{{NgayDuyet}}</td>
+        <td>{{NgayHoanThanh}}</td>
+        <td>{{TinhTrang}}</td>
+        <td>{{TongTien}}</td>
+        <td>
+            <a class="btn btn-edit" data-id="" data-toggle="modal" data-target="#myModal"><i class="ti-pencil-alt"></i></a>
+            <a class="btn btn-delete" data-id=""><i class="ti-trash"></i></a>
+        </td>
+    </tr>
+</script>

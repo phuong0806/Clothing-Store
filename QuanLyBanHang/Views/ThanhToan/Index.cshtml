@@ -1,0 +1,209 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section cssHeader {
+    <style>
+        .btn-back, .btn-xacnhan {
+            float: right;
+            background: #333;
+            color: white;
+            padding: 1px 13px;
+            border-radius: 2px;
+            margin-top: 7px;
+            font-size: 15px;
+        }
+
+            .btn-back:hover, .btn-xacnhan:hover {
+                color: white;
+                text-decoration: none;
+            }
+
+        table {
+            width: 100%;
+            border: 1px solid #333;
+        }
+
+        th {
+            background: #333;
+            color: white;
+            font-weight: bold;
+            padding: 5px 0px;
+        }
+
+        td, th {
+            border-bottom: 1px solid #333;
+            border-right: 1px solid gray;
+            padding: 5px 10px;
+        }
+
+        select {
+            background: #e2e2e2;
+            border: none;
+            color: #333;
+            width: 100px;
+            font-size: 1rem;
+            padding: 0px 5px;
+        }
+
+            select option {
+                text-align: center;
+            }
+
+        .no-border {
+            border: none;
+        }
+
+        .total-cost {
+            font-size: 18px;
+            color: #a37e2c;
+            font-weight: bold;
+        }
+
+        .btn-dathang {
+            padding: 5px 15px;
+            background: #333333;
+            color: #fff;
+            width: auto;
+            text-decoration: none;
+            margin-top: 8px;
+            display: block;
+            border-radius: 3px;
+        }
+
+            .btn-dathang:hover {
+                text-decoration: none;
+                color: white;
+            }
+
+        .del-sanpham {
+            text-decoration: none;
+            color: gray;
+            display: block;
+            padding-top: 10px;
+        }
+
+            .del-sanpham:hover {
+                text-decoration: none;
+                color: #333;
+            }
+
+        .input-form {
+            display: inline-block;
+            margin-bottom: 7px;
+            width: 250px;
+            padding: 5px 10px;
+            background: #e2e2e2;
+            border: none;
+            font-size: 15px;
+        }
+
+        .title {
+            font-size: 1.5rem;
+            display: block;
+            padding-bottom: 5px;
+        }
+
+        .font-bold {
+            font-weight: bold;
+        }
+
+        .block {
+        }
+
+        .thong-tin-dat-hang span {
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+    </style>
+}
+
+@section jsFooter {
+    <script src="~/libs/js/thanhtoan.js"></script>
+}
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="big-category">
+            <div class="title-category">
+                ORDER
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12">
+        <div class="menu-bottom">
+            <!--EMPTY-->
+        </div>
+    </div>
+</div>
+<div class="row mt-3">
+    <div class="col-sm-12">
+        <span class="title">THÔNG TIN ĐẶT HÀNG</span>
+        <small style="font-style:italic;padding-bottom:20px;display:block">(*) Thông tin yêu cầu bắt buộc nhập</small>
+        <div class="thong-tin-dat-hang">
+            <div class="block">
+                <input type="text" class="input-form" placeholder="Họ tên: " name="hoten" id="hoten" value="" /> <span>(*)</span>
+            </div>
+            <div class="block">
+                <input type="text" class="input-form" placeholder="Điện thoại: " name="dienthoai" id="dienthoai" value="" /> <span>(*)</span>
+            </div>
+            <div class="block">
+                <input type="text" class="input-form" placeholder="Địa chỉ: " name="diachi" id="diachi" value="" /> <span>(*)</span>
+            </div>
+            <div class="block">
+                <input type="text" class="input-form" placeholder="Email: " name="email" id="email" value="" /> <span>(*)</span>
+            </div>
+            <div class="block">
+                <input type="text" class="input-form" placeholder="Promotion Code (Mã giảm giá): " name="magiamgia" id="magiamgia" value="" />
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row mb-3 mt-3">
+    <div class="col-sm-12">
+        <span class="title">THÔNG TIN ĐƠN HÀNG</span>
+        <table style="" id='result-data'>
+            <tr class="text-center">
+                <th style="width:15%">Hình ảnh</th>
+                <th class="text-left" style="width:40%">Chi tiết</th>
+                <th style="width:15%">Số lượng</th>
+                <th style="width:15%">Giá</th>
+                <th style="width:15%">Thành tiền</th>
+            </tr>
+        </table>
+        <div class="float-right">
+            <div class="total-cost" style="float:right">
+                <span>Tổng cộng: </span>
+                <span class="total-cost-cart"></span>
+            </div>
+            <div>
+                <a href="#" class="btn-xacnhan">Đặt hàng</a>
+                <a href="/gio-hang" class="btn-back" style="margin-right:5px">Quay lại</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script id="data-template" type="x-tmpl-mustache">
+    <tr class="text-center">
+        <td>
+            <img src="{{HinhAnh}}" width="100" />
+        </td>
+        <td class="text-left">
+            <div style="padding-bottom:10px;" class="font-bold">{{TenSanPham}}</div>
+            <div style="padding-bottom:10px;">
+                <span style="margin-right:20px" class="font-bold">Kích cỡ:</span><span> {{KichCo}} </span>
+            </div>
+            <div style="padding-bottom:10px;">
+                <span style="margin-right:13px" class="font-bold">Màu sắc:</span><span> {{Mau}} </span>
+            </div>
+        </td>
+        <td>
+            <span>3</span>
+        </td>
+        <td>{{Gia}}</td>
+        <td>{{TongTien}}</td>
+    </tr>
+</script>

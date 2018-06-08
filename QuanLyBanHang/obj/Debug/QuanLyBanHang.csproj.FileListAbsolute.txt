@@ -241,6 +241,7 @@ C:\Users\VTA\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\obj
 C:\Users\VTA\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\obj\Debug\QuanLyBanHang.dll
 C:\Users\VTA\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\obj\Debug\QuanLyBanHang.pdb
 <<<<<<< HEAD
+<<<<<<< HEAD
 C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\ApplicationInsights.config
 C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\roslyn\csc.exe
 C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
@@ -303,9 +304,14 @@ C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\obj\
 C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\obj\Debug\QuanLyBanHang.dll
 C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\obj\Debug\QuanLyBanHang.pdb
 =======
+=======
+>>>>>>> 214516a4f189536bed6cc5c71a42a8af78a687e3
 C:\Users\anhph\OneDrive\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\Jil.dll
 C:\Users\anhph\OneDrive\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\Sigil.dll
 C:\Users\anhph\OneDrive\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\Jil.pdb
 C:\Users\anhph\OneDrive\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\Jil.xml
 C:\Users\anhph\OneDrive\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\Sigil.xml
+<<<<<<< HEAD
 >>>>>>> e2b9c92aa73a5488619a9b92273ba0bd325ed41d
+=======
+>>>>>>> 214516a4f189536bed6cc5c71a42a8af78a687e3
