@@ -22,6 +22,9 @@ namespace Model.EF
         [StringLength(250)]
         public string TenSanPham { get; set; }
 
+        [StringLength(250)]
+        public string Url { get; set; }
+
         public string MoTa { get; set; }
 
         public int? Gia { get; set; }
@@ -29,6 +32,7 @@ namespace Model.EF
         [StringLength(250)]
         public string HinhAnh { get; set; }
 
+        [Column(TypeName = "xml")]
         public string AnhKhac { get; set; }
 
         public int? MaLoai { get; set; }
@@ -38,8 +42,6 @@ namespace Model.EF
         public int? SoLuong { get; set; }
 
         public bool? TrangThai { get; set; }
-
-        public string Url { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DonHang_SanPham> DonHang_SanPham { get; set; }

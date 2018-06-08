@@ -58,15 +58,9 @@ namespace Model.DAO
 
         public IEnumerable<SanPhamViewModel> layDanhSachTatCaSanPham()
         {
-<<<<<<< HEAD
-            var model = (from sp in db.SanPham
-                         join l in db.LoaiSanPham on sp.MaLoai equals l.ID
-                         join th in db.ThuongHieu on sp.MaThuongHieu equals th.ID
-=======
             var model = (from sp in db.SanPhams
                          join l in db.Loais on sp.MaLoai equals l.ID
                          join th in db.ThuongHieux on sp.MaThuongHieu equals th.ID
->>>>>>> e21535ef34dc1c16d6989a9a77fa6a21967d8bf5
                          select new SanPhamViewModel
                          {
                              ID = sp.ID,
@@ -94,9 +88,6 @@ namespace Model.DAO
 
         public void UpdateSaveImages(int id, string images)
         {
-<<<<<<< HEAD
-            var model = db.SanPham.Find(id);
-=======
             var sp = db.SanPhams.Find(id);
             sp.AnhKhac = images;
             db.SaveChanges();
@@ -157,10 +148,8 @@ namespace Model.DAO
             // Nếu thêm thành công thì trả về true ngược lại thì false
             try
             {
-<<<<<<< HEAD
                 db.SanPham.Add(sp);
                 db.SaveChanges();
-=======
                 if (checkExistUrl(sp.Url))
                 {
                     return false;
@@ -209,8 +198,7 @@ namespace Model.DAO
         {
             try
             {
-<<<<<<< HEAD
-                var entity = db.SanPham.Find(sp.ID);
+                var entity = db.SanPhams.Find(sp.ID);
                 entity.TenSanPham = sp.TenSanPham;
                 entity.MoTa = sp.MoTa;
                 entity.MaLoai = sp.MaLoai;
@@ -219,7 +207,6 @@ namespace Model.DAO
                 entity.Mau = sp.Mau;
                 entity.KichCo = sp.KichCo;
                 entity.Gia = sp.Gia;
-=======
                 if (kiemTraUrl(sp.Url, sp.ID))
                 {
                     return false;
@@ -282,10 +269,8 @@ namespace Model.DAO
         {
             try
             {
-<<<<<<< HEAD
                 var entity = db.SanPham.Find(id);
                 db.SanPham.Remove(entity);
-=======
                 var SanPham = db.SanPhams.FirstOrDefault(x => x.ID == id);
 
                 //Xóa hết dữ liệu của sản phẩm trong bảng Mau_SanPham

@@ -240,6 +240,7 @@ C:\Users\VTA\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin
 C:\Users\VTA\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\obj\Debug\QuanLyBanHang.csprojResolveAssemblyReference.cache
 C:\Users\VTA\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\obj\Debug\QuanLyBanHang.dll
 C:\Users\VTA\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\obj\Debug\QuanLyBanHang.pdb
+<<<<<<< HEAD
 C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\ApplicationInsights.config
 C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\roslyn\csc.exe
 C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
@@ -301,3 +302,10 @@ C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\
 C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\obj\Debug\QuanLyBanHang.csprojResolveAssemblyReference.cache
 C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\obj\Debug\QuanLyBanHang.dll
 C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\obj\Debug\QuanLyBanHang.pdb
+=======
+C:\Users\anhph\OneDrive\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\Jil.dll
+C:\Users\anhph\OneDrive\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\Sigil.dll
+C:\Users\anhph\OneDrive\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\Jil.pdb
+C:\Users\anhph\OneDrive\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\Jil.xml
+C:\Users\anhph\OneDrive\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\Sigil.xml
+>>>>>>> e2b9c92aa73a5488619a9b92273ba0bd325ed41d
