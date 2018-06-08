@@ -88,7 +88,10 @@ namespace Model.DAO
 
         public void UpdateSaveImages(int id, string images)
         {
+<<<<<<< HEAD
             var model = db.SanPhams.Find(id);
+=======
+>>>>>>> 914d665f494e07325499ab522e171664215e332e
             var sp = db.SanPhams.Find(id);
             sp.AnhKhac = images;
             db.SaveChanges();
@@ -148,6 +151,11 @@ namespace Model.DAO
             // Nếu thêm thành công thì trả về true ngược lại thì false
             try
             {
+<<<<<<< HEAD
+=======
+                db.SanPham.Add(sp);
+                db.SaveChanges();
+>>>>>>> 914d665f494e07325499ab522e171664215e332e
                 if (checkExistUrl(sp.Url))
                 {
                     return false;
@@ -193,6 +201,18 @@ namespace Model.DAO
         {
             try
             {
+<<<<<<< HEAD
+=======
+                var entity = db.SanPhams.Find(sp.ID);
+                entity.TenSanPham = sp.TenSanPham;
+                entity.MoTa = sp.MoTa;
+                entity.MaLoai = sp.MaLoai;
+                entity.MaThuongHieu = sp.MaThuongHieu;
+                entity.HinhAnh = sp.HinhAnh;
+                entity.Mau = sp.Mau;
+                entity.KichCo = sp.KichCo;
+                entity.Gia = sp.Gia;
+>>>>>>> 914d665f494e07325499ab522e171664215e332e
                 if (kiemTraUrl(sp.Url, sp.ID))
                 {
                     return false;
@@ -253,8 +273,13 @@ namespace Model.DAO
         {
             try
             {
+<<<<<<< HEAD
                 var entity = db.SanPhams.Find(id);
                 db.SanPhams.Remove(entity);
+=======
+                var entity = db.SanPham.Find(id);
+                db.SanPham.Remove(entity);
+>>>>>>> 914d665f494e07325499ab522e171664215e332e
                 var SanPham = db.SanPhams.FirstOrDefault(x => x.ID == id);
 
                 //Xóa hết dữ liệu của sản phẩm trong bảng Mau_SanPham

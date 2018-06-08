@@ -168,13 +168,20 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\CommonController.cs" />
     <Compile Include="Areas\Admin\Controllers\DanhMucController.cs" />
+    <Compile Include="Areas\Admin\Controllers\DonHangController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoaiController.cs" />
     <Compile Include="Areas\Admin\Controllers\MauController.cs" />
     <Compile Include="Areas\Admin\Controllers\SanPhamController.cs" />
     <Compile Include="Areas\Admin\Controllers\ThuongHieuController.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="Controllers\ChiTietSanPhamController.cs" />
+    <Compile Include="Controllers\GioHangController.cs" />
+>>>>>>> 914d665f494e07325499ab522e171664215e332e
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SanPhamController.cs" />
+    <Compile Include="Controllers\ThanhToanController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -192,6 +199,7 @@
     <Content Include="Assets\img\ren-logo %281%29.png" />
     <Content Include="Assets\img\ren-logo.png" />
     <Content Include="Assets\img\ren-nav.png" />
+    <Content Include="Assets\js\donhang.js" />
     <Content Include="Assets\js\home.js" />
     <Content Include="Assets\sanpham.js" />
     <Content Include="Content\bootstrap.css" />
@@ -209,6 +217,7 @@
     <Content Include="libs\font\Read_Me_First.txt" />
     <Content Include="libs\Image\logo\32470983_2069884193251729_6716641918169645056_n.png" />
     <Content Include="libs\Image\logo\add.png" />
+    <Content Include="libs\Image\logo\bag.png" />
     <Content Include="libs\Image\logo\logo.jpg" />
     <Content Include="libs\Image\logo\search-icon.png" />
     <Content Include="libs\Image\product\h1.jpg" />
@@ -217,15 +226,19 @@
     <Content Include="libs\Image\product\h4.jpg" />
     <Content Include="libs\js\animate.css" />
     <Content Include="libs\js\danhmuc.js" />
+    <Content Include="libs\js\giohang.js" />
+    <Content Include="libs\js\index.js" />
     <Content Include="libs\js\loginAdmin.js" />
     <Content Include="libs\js\mau.js" />
     <Content Include="libs\js\sanpham.js" />
+    <Content Include="libs\js\thanhtoan.js" />
     <Content Include="libs\js\thuonghieu.js" />
     <Content Include="libs\plugins\chosen-sprite%402x.png" />
     <Content Include="libs\plugins\chosen-sprite.png" />
     <Content Include="libs\plugins\chosen.jquery.js" />
     <Content Include="libs\plugins\chosen.min.css" />
     <Content Include="libs\plugins\jscolor.js" />
+    <Content Include="libs\plugins\mustache.js" />
     <Content Include="libs\plugins\notify.min.js" />
     <Content Include="libs\plugins\thumbimage\ninja-slider.css" />
     <Content Include="libs\plugins\thumbimage\ninja-slider.js" />
@@ -946,6 +959,7 @@
     <Content Include="Areas\Admin\Views\ThuongHieu\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Loai\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Mau\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\DonHang\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -976,6 +990,8 @@
     <Content Include="Views\SanPham\Index.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\SanPham\ChiTietSanPham.cshtml" />
+    <Content Include="Views\GioHang\Index.cshtml" />
+    <Content Include="Views\ThanhToan\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

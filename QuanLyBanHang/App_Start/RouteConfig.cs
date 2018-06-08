@@ -28,13 +28,32 @@ namespace QuanLyBanHang
             );
 
             routes.MapRoute(
-                name: "Default",
+                name: "Giỏ hàng",
+                url: "gio-hang",
+                defaults: new { controller = "GioHang", action = "Index", id = UrlParameter.Optional },
+                namespaces: new[] { "QuanLyBanhang.Controllers" }
+            );
+
+            routes.MapRoute(
+                name: "Thanh toán",
+                url: "thanh-toan",
+                defaults: new { controller = "ThanhToan", action = "Index", id = UrlParameter.Optional },
+                namespaces: new[] { "QuanLyBanhang.Controllers" }
+            );
+
+            routes.MapRoute(
+                name: "Trang chủ",
                 url: "",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
                 namespaces: new[] { "QuanLyBanhang.Controllers" }
             );
 
-
+            routes.MapRoute(
+               name: "Default",
+               url: "{controller}/{action}/{id}",
+               defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
+               namespaces: new[] { "BookStore.Controllers" }
+           );
         }
     }
 }

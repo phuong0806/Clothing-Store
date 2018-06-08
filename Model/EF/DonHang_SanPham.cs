@@ -11,14 +11,22 @@ namespace Model.EF
         [Key]
         [Column(Order = 0)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int SanPhamID { get; set; }
+        public int DonHangID { get; set; }
 
         [Key]
         [Column(Order = 1)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int DonHangID { get; set; }
+        public int SanPhamID { get; set; }
+
+        [StringLength(50)]
+        public string Mau { get; set; }
+
+        [StringLength(50)]
+        public string KichCo { get; set; }
 
         public int? SoLuong { get; set; }
+
+        public int? Gia { get; set; }
 
         public int? TongTien { get; set; }
 

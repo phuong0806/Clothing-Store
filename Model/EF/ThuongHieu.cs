@@ -12,7 +12,7 @@ namespace Model.EF
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public ThuongHieu()
         {
-            SanPham = new HashSet<SanPham>();
+            SanPhams = new HashSet<SanPham>();
         }
 
         public int ID { get; set; }
@@ -21,6 +21,6 @@ namespace Model.EF
         public string TenThuongHieu { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SanPham> SanPham { get; set; }
+        public virtual ICollection<SanPham> SanPhams { get; set; }
     }
 }

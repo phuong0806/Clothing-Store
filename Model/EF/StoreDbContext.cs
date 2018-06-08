@@ -27,7 +27,6 @@ namespace Model.EF
             modelBuilder.Entity<DonHang>()
                 .HasMany(e => e.DonHang_SanPham)
                 .WithRequired(e => e.DonHang)
-                .HasForeignKey(e => e.SanPhamID)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<KichCo>()
@@ -48,11 +47,10 @@ namespace Model.EF
             modelBuilder.Entity<SanPham>()
                 .HasMany(e => e.DonHang_SanPham)
                 .WithRequired(e => e.SanPham)
-                .HasForeignKey(e => e.DonHangID)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<ThuongHieu>()
-                .HasMany(e => e.SanPham)
+                .HasMany(e => e.SanPhams)
                 .WithOptional(e => e.ThuongHieu)
                 .HasForeignKey(e => e.MaThuongHieu);
         }

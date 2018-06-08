@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\DanhMucDAO.cs" />
+    <Compile Include="DAO\DonHangDAO.cs" />
     <Compile Include="DAO\KichCoDAO.cs" />
     <Compile Include="DAO\LoaiDAO.cs" />
     <Compile Include="DAO\MauDAO.cs" />
@@ -68,10 +69,12 @@
     <Compile Include="EF\StoreDbContext.cs" />
     <Compile Include="EF\ThuongHieu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\DonHangViewModel.cs" />
     <Compile Include="ViewModel\ImageViewModel.cs" />
     <Compile Include="ViewModel\KichCoViewModel.cs" />
     <Compile Include="ViewModel\LoaiViewModel.cs" />
     <Compile Include="ViewModel\MauViewModel.cs" />
+    <Compile Include="ViewModel\SanPhamGioHang.cs" />
     <Compile Include="ViewModel\SanPhamViewModel.cs" />
   </ItemGroup>
   <ItemGroup />

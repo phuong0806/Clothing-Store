@@ -240,13 +240,86 @@ C:\Users\VTA\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin
 C:\Users\VTA\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\obj\Debug\QuanLyBanHang.csprojResolveAssemblyReference.cache
 C:\Users\VTA\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\obj\Debug\QuanLyBanHang.dll
 C:\Users\VTA\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\obj\Debug\QuanLyBanHang.pdb
+<<<<<<< HEAD
+<<<<<<< HEAD
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\ApplicationInsights.config
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\roslyn\csc.exe
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\roslyn\vbc.exe
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\roslyn\VBCSCompiler.exe
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\QuanLyBanHang.dll.config
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\QuanLyBanHang.dll
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\QuanLyBanHang.pdb
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\Antlr3.Runtime.dll
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\Common.dll
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\EntityFramework.dll
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\EntityFramework.SqlServer.dll
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\Microsoft.AI.Web.dll
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\Model.dll
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\Newtonsoft.Json.dll
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\System.Web.Helpers.dll
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\System.Web.Mvc.dll
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\System.Web.Optimization.dll
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\System.Web.Razor.dll
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\System.Web.WebPages.dll
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\System.Web.WebPages.Razor.dll
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\WebGrease.dll
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\Common.pdb
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\Model.pdb
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\EntityFramework.xml
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\EntityFramework.SqlServer.xml
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\Microsoft.AI.Web.xml
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\System.Web.Helpers.xml
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\System.Web.Mvc.xml
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\System.Web.Razor.xml
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\System.Web.WebPages.xml
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\System.Web.WebPages.Razor.xml
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\System.Web.Optimization.xml
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\Antlr3.Runtime.pdb
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\Newtonsoft.Json.xml
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\obj\Debug\QuanLyBanHang.csprojResolveAssemblyReference.cache
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\obj\Debug\QuanLyBanHang.dll
+C:\Users\Su\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\obj\Debug\QuanLyBanHang.pdb
+=======
+=======
+>>>>>>> 214516a4f189536bed6cc5c71a42a8af78a687e3
 C:\Users\anhph\OneDrive\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\Jil.dll
 C:\Users\anhph\OneDrive\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\Sigil.dll
 C:\Users\anhph\OneDrive\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\Jil.pdb
 C:\Users\anhph\OneDrive\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\Jil.xml
 C:\Users\anhph\OneDrive\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\Sigil.xml
+<<<<<<< HEAD
 C:\Users\VTA\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\Jil.dll
 C:\Users\VTA\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\Sigil.dll
 C:\Users\VTA\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\Jil.pdb
 C:\Users\VTA\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\Jil.xml
 C:\Users\VTA\Documents\Visual Studio 2015\Projects\Store\Store\QuanLyBanHang\bin\Sigil.xml
+=======
+<<<<<<< HEAD
+>>>>>>> e2b9c92aa73a5488619a9b92273ba0bd325ed41d
+=======
+>>>>>>> 214516a4f189536bed6cc5c71a42a8af78a687e3
+>>>>>>> 914d665f494e07325499ab522e171664215e332e
