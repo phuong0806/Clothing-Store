@@ -15,7 +15,6 @@ namespace Model.EF
             DonHang_SanPham = new HashSet<DonHang_SanPham>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ID { get; set; }
 
         [StringLength(50)]

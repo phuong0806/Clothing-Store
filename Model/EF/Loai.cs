@@ -15,11 +15,6 @@ namespace Model.EF
             SanPham = new HashSet<SanPham>();
         }
 
-<<<<<<< HEAD:Model/EF/LoaiSanPham.cs
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-=======
->>>>>>> e21535ef34dc1c16d6989a9a77fa6a21967d8bf5:Model/EF/Loai.cs
         public int ID { get; set; }
 
         [StringLength(50)]

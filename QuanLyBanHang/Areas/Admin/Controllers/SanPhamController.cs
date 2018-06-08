@@ -97,11 +97,11 @@ namespace QuanLyBanHang.Areas.Admin.Controllers
 
             if (sp.ID == 0)
             {
-                kiemtra = spDAO.insert(sp);
+                kiemtra = spDAO.insert(sp); //thêm sản phẩm
             }
             else
             {
-                kiemtra = spDAO.update(sp);
+                kiemtra = spDAO.update(sp); //cập nhật sản phẩm
             }
 
             return Json(new

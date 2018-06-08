@@ -173,7 +173,6 @@
     <Compile Include="Areas\Admin\Controllers\MauController.cs" />
     <Compile Include="Areas\Admin\Controllers\SanPhamController.cs" />
     <Compile Include="Areas\Admin\Controllers\ThuongHieuController.cs" />
-    <Compile Include="Controllers\ChiTietSanPhamController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SanPhamController.cs" />
     <Compile Include="Global.asax.cs">

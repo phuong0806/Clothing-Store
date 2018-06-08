@@ -33,7 +33,7 @@ namespace Model.DAO
         public IEnumerable<MauViewModel> getDanhSachTheoSanPham(int SanPhamID)
         {
             var result = (from mau in db.Maus
-                       where mau.SanPhams.Any(x => x.ID == SanPhamID)
+                       where mau.SanPham.Any(x => x.ID == SanPhamID)
                        select new MauViewModel
                        {
                            ID = mau.ID,

@@ -32,7 +32,7 @@ namespace Model.DAO
         public IEnumerable<KichCoViewModel> getDanhSachTheoSanPham(int SanPhamID)
         {
             var result = (from kichco in db.KichCoes
-                          where kichco.SanPhams.Any(x => x.ID == SanPhamID)
+                          where kichco.SanPham.Any(x => x.ID == SanPhamID)
                           select new KichCoViewModel
                           {
                               ID = kichco.ID,

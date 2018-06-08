@@ -18,13 +18,13 @@ namespace Model.DAO
 
         public List<ThuongHieu> getTatCaThuongHieu()
         {
-            var model = db.ThuongHieu.ToList();
+            var model = db.ThuongHieux.ToList();
             return model;
         }
 
         public ThuongHieu layThuongHieuTheoID(int id)
         {
-            var entity = db.ThuongHieu.Find(id);
+            var entity = db.ThuongHieux.Find(id);
             return entity;
         }
 
@@ -32,8 +32,8 @@ namespace Model.DAO
         {
             try
             {
-                var entity = db.ThuongHieu.Find(id);
-                db.ThuongHieu.Remove(entity);
+                var entity = db.ThuongHieux.Find(id);
+                db.ThuongHieux.Remove(entity);
                 db.SaveChanges();
                 return true;
             }
@@ -47,7 +47,7 @@ namespace Model.DAO
         {
             try
             {
-                db.ThuongHieu.Add(loai);
+                db.ThuongHieux.Add(loai);
                 db.SaveChanges();
                 return true;
             }
@@ -61,7 +61,7 @@ namespace Model.DAO
         {
             try
             {
-                var loaisanpham = db.ThuongHieu.Find(loai.ID);
+                var loaisanpham = db.ThuongHieux.Find(loai.ID);
                 loaisanpham.TenThuongHieu = loai.TenThuongHieu;
                 db.SaveChanges();
                 return true;

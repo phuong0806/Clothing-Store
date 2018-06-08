@@ -115,6 +115,7 @@
             <div id="ninja-slider" style="float:left;">
                 <div class="slider-inner">
                     <ul>
+                        <li><a class="ns-img" href="@Model.HinhAnh"></a></li>
                         @foreach (var item in DanhSachHinhAnh)
                         {
                             <li><a class="ns-img" href="@item"></a></li>
@@ -126,6 +127,9 @@
             <div id="thumbnail-slider" style="float:left;">
                 <div class="inner">
                     <ul>
+                        <li>
+                            <a class="thumb" href="@Model.HinhAnh"></a>
+                        </li>
                         @foreach (var item in DanhSachHinhAnh)
                         {
                             <li>

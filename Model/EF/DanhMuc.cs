@@ -12,7 +12,7 @@ namespace Model.EF
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public DanhMuc()
         {
-            Loais = new HashSet<Loai>();
+            Loai = new HashSet<Loai>();
         }
 
         public int ID { get; set; }
@@ -21,6 +21,6 @@ namespace Model.EF
         public string TenDanhMuc { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Loai> Loais { get; set; }
+        public virtual ICollection<Loai> Loai { get; set; }
     }
 }

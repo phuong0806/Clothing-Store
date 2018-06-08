@@ -13,14 +13,17 @@ namespace Model.EF
         public SanPham()
         {
             DonHang_SanPham = new HashSet<DonHang_SanPham>();
-            KichCoes = new HashSet<KichCo>();
-            Maus = new HashSet<Mau>();
+            KichCo = new HashSet<KichCo>();
+            Mau = new HashSet<Mau>();
         }
 
         public int ID { get; set; }
 
         [StringLength(250)]
         public string TenSanPham { get; set; }
+
+        [StringLength(250)]
+        public string Url { get; set; }
 
         public string MoTa { get; set; }
 
@@ -29,6 +32,7 @@ namespace Model.EF
         [StringLength(250)]
         public string HinhAnh { get; set; }
 
+        [Column(TypeName = "xml")]
         public string AnhKhac { get; set; }
 
         public int? MaLoai { get; set; }
@@ -39,8 +43,6 @@ namespace Model.EF
 
         public bool? TrangThai { get; set; }
 
-        public string Url { get; set; }
-
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DonHang_SanPham> DonHang_SanPham { get; set; }
 
@@ -49,9 +51,9 @@ namespace Model.EF
         public virtual ThuongHieu ThuongHieu { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<KichCo> KichCoes { get; set; }
+        public virtual ICollection<KichCo> KichCo { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Mau> Maus { get; set; }
+        public virtual ICollection<Mau> Mau { get; set; }
     }
 }
