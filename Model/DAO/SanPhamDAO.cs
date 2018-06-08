@@ -7,6 +7,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace Model.DAO
 {
@@ -55,15 +56,22 @@ namespace Model.DAO
             return model.Url;
         }
 
-        public List<SanPhamViewModel> layDanhSachTatCaSanPham()
+        public IEnumerable<SanPhamViewModel> layDanhSachTatCaSanPham()
         {
+<<<<<<< HEAD
+            var model = (from sp in db.SanPham
+                         join l in db.LoaiSanPham on sp.MaLoai equals l.ID
+                         join th in db.ThuongHieu on sp.MaThuongHieu equals th.ID
+=======
             var model = (from sp in db.SanPhams
                          join l in db.Loais on sp.MaLoai equals l.ID
                          join th in db.ThuongHieux on sp.MaThuongHieu equals th.ID
+>>>>>>> e21535ef34dc1c16d6989a9a77fa6a21967d8bf5
                          select new SanPhamViewModel
                          {
                              ID = sp.ID,
                              TenSanPham = sp.TenSanPham,
+                             Url = sp.Url,
                              MoTa = sp.MoTa,
                              Gia = sp.Gia,
                              HinhAnh = sp.HinhAnh,
@@ -71,8 +79,8 @@ namespace Model.DAO
                              MaThuongHieu = sp.MaThuongHieu,
                              TenThuongHieu = th.TenThuongHieu,
                              TenLoai = l.TenLoai,
-                             MauCollection = sp.Maus,
-                             KichCoCollection = sp.KichCoes,
+                             MauCollection = sp.Maus.Select(x => new MauViewModel { ID = x.ID, Name = x.Name, Code = x.Code }),
+                             KichCoCollection = sp.KichCoes.Select(x => new KichCoViewModel { ID = x.ID, Name = x.Name }),
                          }).ToList();
 
             CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");   // try with "en-US"
@@ -86,14 +94,61 @@ namespace Model.DAO
 
         public void UpdateSaveImages(int id, string images)
         {
+<<<<<<< HEAD
+            var model = db.SanPham.Find(id);
+=======
             var sp = db.SanPhams.Find(id);
             sp.AnhKhac = images;
             db.SaveChanges();
         }
 
-        public SanPham laySanPhamTheoID(int id)
+        public SanPhamViewModel laySanPhamTheoURL(string url)
         {
-            var model = db.SanPhams.Find(id);
+            var model = (from sp in db.SanPhams
+                         join dm in db.Loais on sp.MaLoai equals dm.ID
+                         where sp.Url == url
+                         select new SanPhamViewModel
+                         {
+                             TenSanPham = sp.TenSanPham,
+                             HinhAnh = sp.HinhAnh,
+                             Url = sp.Url,
+                             Gia = sp.Gia,
+                             MaThuongHieu = sp.MaThuongHieu,
+                             SoLuong = sp.SoLuong,
+                             ID = sp.ID,
+                             MaLoai = sp.MaLoai,
+                             MoTa = sp.MoTa,
+                             AnhKhac = sp.AnhKhac,
+                             DanhMucID = dm.DanhMucID,
+                             MauCollection = sp.Maus.Select(x => new MauViewModel { ID = x.ID, Name = x.Name, Code = x.Code }),
+                             KichCoCollection = sp.KichCoes.Select(x => new KichCoViewModel { ID = x.ID, Name = x.Name }),
+                         }).SingleOrDefault();
+            CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");   // try with "en-US"
+            model.GiaString = double.Parse(model.Gia.ToString()).ToString("#,###", cul.NumberFormat);
+            return model;
+        }
+
+        public SanPhamViewModel laySanPhamTheoID(int id)
+        {
+            var model = (from sp in db.SanPhams
+                         join dm in db.Loais on sp.MaLoai equals dm.ID
+                         where sp.ID == id
+                         select new SanPhamViewModel {
+                             TenSanPham = sp.TenSanPham,
+                             HinhAnh = sp.HinhAnh,
+                             Url = sp.Url,
+                             Gia = sp.Gia,
+                             MaThuongHieu = sp.MaThuongHieu,
+                             SoLuong = sp.SoLuong,
+                             ID = sp.ID,
+                             MaLoai = sp.MaLoai,
+                             MoTa = sp.MoTa,
+                             AnhKhac = sp.AnhKhac,
+                             DanhMucID = dm.DanhMucID,
+                         }).SingleOrDefault();
+            CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");   // try with "en-US"
+            model.GiaString = double.Parse(model.Gia.ToString()).ToString("#,###", cul.NumberFormat);
+>>>>>>> e21535ef34dc1c16d6989a9a77fa6a21967d8bf5
             return model;
         }
 
@@ -102,6 +157,10 @@ namespace Model.DAO
             // Nếu thêm thành công thì trả về true ngược lại thì false
             try
             {
+<<<<<<< HEAD
+                db.SanPham.Add(sp);
+                db.SaveChanges();
+=======
                 if (checkExistUrl(sp.Url))
                 {
                     return false;
@@ -135,6 +194,7 @@ namespace Model.DAO
                 db.SanPhams.Add(SanPhamNew); // Thêm sản phẩm
                 db.SaveChanges(); // Lưu lại sản phẩm đã thêm
 
+>>>>>>> e21535ef34dc1c16d6989a9a77fa6a21967d8bf5
                 return true;
             }
             catch (Exception)
@@ -149,6 +209,17 @@ namespace Model.DAO
         {
             try
             {
+<<<<<<< HEAD
+                var entity = db.SanPham.Find(sp.ID);
+                entity.TenSanPham = sp.TenSanPham;
+                entity.MoTa = sp.MoTa;
+                entity.MaLoai = sp.MaLoai;
+                entity.MaThuongHieu = sp.MaThuongHieu;
+                entity.HinhAnh = sp.HinhAnh;
+                entity.Mau = sp.Mau;
+                entity.KichCo = sp.KichCo;
+                entity.Gia = sp.Gia;
+=======
                 if (kiemTraUrl(sp.Url, sp.ID))
                 {
                     return false;
@@ -187,6 +258,7 @@ namespace Model.DAO
                     insertKichCo(SanPhamUpdate, id);
                 }
 
+>>>>>>> e21535ef34dc1c16d6989a9a77fa6a21967d8bf5
                 db.SaveChanges();
                 return true;
             }
@@ -210,6 +282,10 @@ namespace Model.DAO
         {
             try
             {
+<<<<<<< HEAD
+                var entity = db.SanPham.Find(id);
+                db.SanPham.Remove(entity);
+=======
                 var SanPham = db.SanPhams.FirstOrDefault(x => x.ID == id);
 
                 //Xóa hết dữ liệu của sản phẩm trong bảng Mau_SanPham
@@ -225,6 +301,7 @@ namespace Model.DAO
                 }
 
                 db.SanPhams.Remove(SanPham);
+>>>>>>> e21535ef34dc1c16d6989a9a77fa6a21967d8bf5
                 db.SaveChanges();
                 return true;
             }
@@ -242,6 +319,27 @@ namespace Model.DAO
                 }
                 return false;
             }
+        }
+
+        public List<string> loadMoreImages(int id)
+        {
+            var sp = laySanPhamTheoID(id);
+            //Nếu không có ảnh thì return rỗng luôn
+            if (sp.AnhKhac == null || sp.AnhKhac == "")
+            {
+                return null;
+            }
+
+            XElement xImages = XElement.Parse(sp.AnhKhac);
+
+            List<string> listImageReturn = new List<string>();
+
+            foreach (XElement element in xImages.Elements())
+            {
+                listImageReturn.Add(element.Value);
+            }
+
+            return listImageReturn;
         }
 
         //Xóa hết dữ liệu của sản phẩm trong bảng Mau_SanPham

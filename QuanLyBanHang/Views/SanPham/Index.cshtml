@@ -1,18 +1,19 @@
 ﻿
 @{
+    var DanhSachSanPham = ViewBag.DanhSachSanPham;
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div class="row">
-    @foreach (var item in ViewBag.DanhSachSanPham)
+    @foreach (var item in DanhSachSanPham)
     {
-                        <!-- A PRODUCT -->
+<<<<<<< HEAD
+        <!-- A PRODUCT -->
         <div class="col-sm-3 a-product">
             <div class="top">
                 <a href="">
-                   
-                    <img src="~/libs/Image/product/h3.jpg" />
+                    <img src="@item.HinhAnh" />
                 </a>
             </div>
             <div class="bot">
@@ -22,7 +23,60 @@
                 <div class="size">Size: @item.KichCo</div>
             </div>
         </div>
-                    <!-- END PRODUCT -->
+        <!-- END PRODUCT -->
+=======
+     <!-- A PRODUCT -->
+        <div class="col-sm-3 a-product">
+            <a href="/san-pham/@item.Url" style="color: #333;text-decoration: none !important;">
+                <div class="top">
+                    <img src="@item.HinhAnh" />
+                </div>
+                <div class="bot">
+                    <span class="title">
+                        @item.TenSanPham
+                    </span>
+                    <div class="price">Price: <span>@item.GiaString</span>đ</div>
+                    <div class="colour">
+                        Colour:
+                        @{
+                            var i = 0;
+                            var count = item.MauCollection.Count;
+                        }
+                        @foreach (var itemMau in item.MauCollection)
+                        {
+                            if (i++ == count - 1)
+                            {
+                                @itemMau.Name
+                            }
+                            else
+                            {
+                                @itemMau.Name<span> | </span>
+                            }
+                        }
+                    </div>
+                    <div class="size">
+                        Size:
+                        @{
+                            i = 0;
+                            count = item.KichCoCollection.Count;
+                        }
+                        @foreach (var itemKichCo in item.KichCoCollection)
+                        {
+                            if (i++ == count - 1)
+                            {
+                                @itemKichCo.Name
+                            }
+                            else
+                            {
+                                @itemKichCo.Name<span> | </span>
+                            }
+                        }
+                    </div>
+                </div>
+            </a>
+        </div>
+    <!-- END PRODUCT -->
+>>>>>>> e21535ef34dc1c16d6989a9a77fa6a21967d8bf5
     }
 </div>
 <div class="row">

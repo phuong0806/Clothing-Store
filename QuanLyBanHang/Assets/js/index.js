@@ -37,21 +37,20 @@ $(document).on('click', '#delete-link', function () {
         var filename = $('#result .hinh-anh.active').attr('src');
         $.ajax({
             type: "POST",
-            url: "/Admin/SanPham/deleteImage",
+            url: "/Admin/Common/deleteImage",
             dataType: "json",
             data: { filename: filename },
             success: function (result) {
                 reset();
-                console.log(result);
                 alert("Xóa thành công");
                 var html = "";
                 for (var i = 0; i < result.length; i++) {
-                    html += "<div class='col-sm-3 a-book'>";
-                    html += "<img src=" + result[i].path + " class='hinh-anh' alt='Alternate Text' />";
+                    html += "<div class='col-sm-2 a-book'>";
+                    html += "<img src='" + result[i].path + "' class='hinh-anh' alt='Alternate Text' />";
                     html += "<span class='ten-hinh-anh'>" + result[i].name + "</span>";
                     html += "</div>";
                 }
-                $('#result').html(html);
+                $('.manage-image .list-img #result').html(html);
             },
             error: function (err) {
                 alert(err.statusText);
@@ -62,21 +61,26 @@ $(document).on('click', '#delete-link', function () {
 
 
 $(document).ready(function () {
-
-    $('.hinh-anh').dblclick(function () {
+    $(document).on('dblclick','.hinh-anh',function () {
         var url = $(this).attr('src');
-        $('#result-images').append(`<div class="image"><img src="${url}" class="more-img" /><a href="#" class="remove-image">×</a></div>`);
+        $('.image').removeClass('upload');
+        $(`<div class="image upload"><img src="${url}" class="more-img" /><a href="#" class="remove-image">×</a></div>`).insertAfter('#result-images-wrapper');
         $('.manage-image').css({ 'display': 'none', 'visibility': 'hidden' });
         $('.background-black').css({ 'display': 'none', 'visibility': 'hidden' });
-        saveImage();
+        
+        setTimeout(function () {
+            saveImage();
+        }, 500);
     });
 
     $(document).on('dblclick', '.remove-image', function () {
         $(this).parent().remove();
-        saveImage();
+        setTimeout(function () {
+            saveImage();
+        }, 500);
     })
 
-    $(document).on('click','.more-images',function () {
+    $(document).on('click', '.more-images', function () {
         var SanPhamID = $(this).data('id');
         $('#id-hidden').val(SanPhamID);
         loadMoreImages(SanPhamID);
@@ -97,7 +101,7 @@ $(document).ready(function () {
             dataType: "json",
             success: function (response) {
                 var data = response.data;
-                var html = '';
+                var html = '<div id="result-images-wrapper"></div><div class="line-dashed"></div>';
                 $.each(data, function (i, item) {
                     html += `<div class="image"><img src="${item}" class="more-img" /><a href="#" class="remove-image">×</a></div>`;
                 })
@@ -128,12 +132,35 @@ $(document).ready(function () {
 });
 
 
-
 /* MODAL IMAGE */
 $(function () {
-    $("#upload-link").on('click', function (e) {
+    $(document).on('click', "#upload-link", function (e) {
         e.preventDefault();
         $("#upload:hidden").trigger('click');
+    });
+});
+
+$(document).on('change', '#upload', function () {
+    $.ajax({
+        url: "/Admin/Common/saveImage",
+        data: function () {
+            var data = new FormData();
+            data.append("file", $("#upload").get(0).files[0]);
+            return data;
+        }(),
+        contentType: false,
+        processData: false,
+        dataType: "json",
+        type: "POST",
+        success: function (response) {
+            var html = "";
+            var url = response.data;
+            html += "<div class='col-sm-2 a-book'>";
+            html += "<img src='" + url + "' class='hinh-anh' alt='Alternate Text' />";
+            html += "<span class='ten-hinh-anh'>" + url.slice(20) + "</span>";
+            html += "</div>";
+            $(html).insertBefore('#result-img-upload');
+        }
     });
 });
 
@@ -157,7 +184,7 @@ function reset() {
 $(document).on('click', '#result .hinh-anh', function () {
     var urlImg = $(this).attr('src');
     var idImg = $(this).attr('id');
-    $('#result .hinh-anh').removeClass('active');
+    $('#result .a-book .hinh-anh').removeClass('active');
     $(this).toggleClass('active');
     $('.img-selected').attr('src', urlImg)
     $('#img-book').val(urlImg);
@@ -173,7 +200,7 @@ $('.background-black').on('click', function () {
     $('.background-black').css({ 'display': 'none', 'visibility': 'hidden' });
 });
 
-$(document).on('click','.btn-chon-anh', function () {
+$(document).on('click', '.btn-chon-anh', function () {
     $('.manage-image').css({ 'display': 'block', 'visibility': 'visible' });
     $('.background-black').css({ 'display': 'block', 'visibility': 'visible' });
 });

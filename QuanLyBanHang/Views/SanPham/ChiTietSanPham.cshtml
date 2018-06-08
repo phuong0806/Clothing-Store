@@ -1,6 +1,8 @@
-﻿
+﻿@model Model.ViewModel.SanPhamViewModel
+
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Chi tiết sản phẩm";
+    var DanhSachHinhAnh = ViewBag.DanhSachHinhAnh;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -44,6 +46,11 @@
                 font-family: 'Helvetica Neue';
                 color: rgb(69, 69, 69);
             }
+
+        .product-link:hover {
+            text-decoration: none;
+            color: #333;
+        }
 
         .product-detail-addcart {
             margin-bottom: 54px;
@@ -108,15 +115,10 @@
             <div id="ninja-slider" style="float:left;">
                 <div class="slider-inner">
                     <ul>
-                        <li><a class="ns-img" href="/libs/Image/product/h4.jpg"></a></li>
-                        <li><a class="ns-img" href="/libs/Image/product/h2.jpg"></a></li>
-                        <li><a class="ns-img" href="/libs/Image/product/h3.jpg"></a></li>
-                        <li><a class="ns-img" href="/libs/Image/product/h4.jpg"></a></li>
-                        <li><a class="ns-img" href="/libs/Image/product/h2.jpg"></a></li>
-                        <li><a class="ns-img" href="/libs/Image/product/h3.jpg"></a></li>
-                        <li><a class="ns-img" href="/libs/Image/product/h4.jpg"></a></li>
-                        <li><a class="ns-img" href="/libs/Image/product/h2.jpg"></a></li>
-                        <li><a class="ns-img" href="/libs/Image/product/h3.jpg"></a></li>
+                        @foreach (var item in DanhSachHinhAnh)
+                        {
+                            <li><a class="ns-img" href="@item"></a></li>
+                        }
                     </ul>
                     <div class="fs-icon" title="Expand/Close"></div>
                 </div>
@@ -124,33 +126,12 @@
             <div id="thumbnail-slider" style="float:left;">
                 <div class="inner">
                     <ul>
-                        <li>
-                            <a class="thumb" href="/libs/Image/product/h4.jpg"></a>
-                        </li>
-                        <li>
-                            <a class="thumb" href="/libs/Image/product/h2.jpg"></a>
-                        </li>
-                        <li>
-                            <a class="thumb" href="/libs/Image/product/h3.jpg"></a>
-                        </li>
-                        <li>
-                            <a class="thumb" href="/libs/Image/product/h4.jpg"></a>
-                        </li>
-                        <li>
-                            <a class="thumb" href="/libs/Image/product/h2.jpg"></a>
-                        </li>
-                        <li>
-                            <a class="thumb" href="/libs/Image/product/h3.jpg"></a>
-                        </li>
-                        <li>
-                            <a class="thumb" href="/libs/Image/product/h4.jpg"></a>
-                        </li>
-                        <li>
-                            <a class="thumb" href="/libs/Image/product/h2.jpg"></a>
-                        </li>
-                        <li>
-                            <a class="thumb" href="/libs/Image/product/h3.jpg"></a>
-                        </li>
+                        @foreach (var item in DanhSachHinhAnh)
+                        {
+                            <li>
+                                <a class="thumb" href="@item"></a>
+                            </li>
+                        }
                     </ul>
                 </div>
             </div>
@@ -159,25 +140,45 @@
     </div>
     <div class="product-detail-info float-right">
         <div class="product-name">
-            <a href="#" class="product-link">STRAPPY DRESS WITH BELT</a>
-            <span class="product-price">Price <span>970,000đ</span></span><br />
-            <span>Colour: Yellow | Teal</span><br />
-            <span>Size: Freesize</span>
+            <a href="#" class="product-link">@Model.TenSanPham</a>
+            <span class="product-price">Price: <span>@Model.GiaString</span>đ</span><br />
+            <span>Colour: 
+            @{
+                var i = 0;
+                var count = Model.MauCollection.Count(); 
+            }
+            @foreach (var itemMau in Model.MauCollection)
+            {
+                if (i++ == count - 1)
+                {
+                    @itemMau.Name
+                }
+                else
+                {
+                    @itemMau.Name<span> | </span>
+                }
+            }
+            </span><br />
+            <span>Size: 
+            @{
+                i = 0;
+                count = Model.KichCoCollection.Count();
+            }
+            @foreach (var itemKichCo in Model.KichCoCollection)
+            {
+                if (i++ == count - 1)
+                {
+                    @itemKichCo.Name
+                }
+                else
+                {
+                    @itemKichCo.Name<span> | </span>
+                }
+            }
+            </span>
         </div>
         <div class="description">
-            <p>*Chi Tiết</p>
-            <p>(cm)</p>
-            <p>*Chiều cao người mẫu: 170cm</p>
-            <ul>
-                <li>Ngực: 98</li>
-                <li>Nách: 48</li>
-                <li>Eo: 104</li>
-                <li>Mông: 132</li>
-                <li>Dài: 92</li>
-            </ul>
-            <p>- Giặt với nước lạnh</p>
-            <p>- Ủi ở chế độ nhỏ nhất</p>
-            <p>* Sản phẩm được sản xuất liên tục</p>
+            @Html.Raw(Model.MoTa)
         </div>
         <div class="product-detail-addcart">
             <a href="#" class="btn-addcart">Thêm vào giỏ hàng</a>

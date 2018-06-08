@@ -10,5 +10,6 @@ namespace Model.ViewModel
     {
         public int ID { get; set; }
         public string TenLoai { get; set; }
+        public int? DanhMucID { get; set; }
     }
 }

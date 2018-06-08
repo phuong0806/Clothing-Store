@@ -11,7 +11,7 @@
     });
 
 
-    $('.btn-edit').click(function () {
+    $(document).on('click','.btn-edit',function () {
         var id = $(this).data('id');
         $.ajax({
             url: '/Admin/Mau/layMau',
@@ -21,7 +21,7 @@
             type: "GET",
             datatype: "json",
             success: function (response) {
-                var data = JSON.parse(response.data);
+                var data = response.data;
                 $('#id').val(data.ID);
                 $('#tenmau').val(data.Name);
                 $('#code').val(data.Code);

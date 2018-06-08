@@ -1,4 +1,5 @@
 ﻿using Model.EF;
+using Model.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,9 +17,42 @@ namespace Model.DAO
             db = new StoreDbContext();
         }
 
-        public Mau layMauTheoID(int id)
+        public IEnumerable<MauViewModel> getDanhSach()
         {
-            var entity = db.Maus.Find(id);
+            var result = (from mau in db.Maus
+                          select new MauViewModel
+                          {
+                              ID = mau.ID,
+                              Name = mau.Name,
+                          }).ToList();
+
+            return result;
+        }
+
+
+        public IEnumerable<MauViewModel> getDanhSachTheoSanPham(int SanPhamID)
+        {
+            var result = (from mau in db.Maus
+                       where mau.SanPhams.Any(x => x.ID == SanPhamID)
+                       select new MauViewModel
+                       {
+                           ID = mau.ID,
+                           Name = mau.Name,
+                           Code = mau.Code
+                       }).ToList();
+
+            return result;
+        }
+
+        public MauViewModel layMauTheoID(int id)
+        {
+            var entity = (from mau in db.Maus
+                          where mau.ID == id 
+                          select new MauViewModel {
+                              ID = mau.ID,
+                              Code = mau.Code,
+                              Name = mau.Name
+                          }).SingleOrDefault();
             return entity;
         }
 

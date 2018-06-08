@@ -29,20 +29,24 @@ namespace Model.ViewModel
 
         public int? MaLoai { get; set; }
 
+        public int? DanhMucID { get; set; }
+
         public int? MaViTri { get; set; }
 
         public string TenThuongHieu { get; set; }
 
         public string TenLoai { get; set; }
 
-        public int SoLuong { get; set; }
+        public string AnhKhac { get; set; }
+
+        public int? SoLuong { get; set; }
 
         public int[] Mau { get; set; }
 
         public int[] KichCo { get; set; }
 
-        public ICollection<Mau> MauCollection { get; set; }
+        public IEnumerable<MauViewModel> MauCollection { get; set; }
 
-        public ICollection<KichCo> KichCoCollection { get; set; }
+        public IEnumerable<KichCoViewModel> KichCoCollection { get; set; }
     }
 }

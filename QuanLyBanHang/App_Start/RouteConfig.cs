@@ -15,15 +15,15 @@ namespace QuanLyBanHang
 
             routes.MapRoute(
               name: "Danh Sách Sản Phẩm",
-              url: "danh-sach-san-pham",
+              url: "san-pham",
               defaults: new { controller = "SanPham", action = "Index", id = UrlParameter.Optional },
               namespaces: new[] { "QuanLyBanhang.Controllers" }
             );
 
             routes.MapRoute(
               name: "Chi tiết sản phẩm",
-              url: "chi-tiet-san-pham",
-              defaults: new { controller = "ChiTietSanPham", action = "Index", id = UrlParameter.Optional },
+              url: "san-pham/{url}",
+              defaults: new { controller = "SanPham", action = "ChiTietSanPham", id = UrlParameter.Optional },
               namespaces: new[] { "QuanLyBanhang.Controllers" }
             );
 

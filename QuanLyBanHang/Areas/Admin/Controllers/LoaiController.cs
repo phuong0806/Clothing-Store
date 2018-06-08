@@ -13,7 +13,7 @@ namespace QuanLyBanHang.Areas.Admin.Controllers
         // GET: Admin/Loai
         public ActionResult Index()
         {
-            ViewBag.danhSachLoaiSanPham = new LoaiDAO().getTatCaLoai();
+            ViewBag.danhSachLoaiSanPham = new LoaiDAO().getDanhSach();
             return View();
         }
 

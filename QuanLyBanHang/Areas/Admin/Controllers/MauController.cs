@@ -20,15 +20,9 @@ namespace QuanLyBanHang.Areas.Admin.Controllers
 
         public JsonResult layMau(int id)
         {
-            var output = JsonConvert.SerializeObject(new MauDAO().layMauTheoID(id),
-                            new JsonSerializerSettings
-                            {
-                                ReferenceLoopHandling = ReferenceLoopHandling.Ignore
-                            });
-
             return Json(new
             {
-                data = output
+                data = new MauDAO().layMauTheoID(id)
             }, JsonRequestBehavior.AllowGet);
         }
 
