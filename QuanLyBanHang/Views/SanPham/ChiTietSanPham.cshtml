@@ -181,7 +181,7 @@
             @Html.Raw(Model.MoTa)
         </div>
         <div class="product-detail-addcart">
-            <a href="#" class="btn-addcart">Thêm vào giỏ hàng</a>
+            <a href="#" class="btn-addcart" data-id="@Model.ID" data-price="@Model.Gia" data-color="@Model.MauCollection.First().ID" data-size="@Model.KichCoCollection.First().ID">Thêm vào giỏ hàng</a>
         </div>
         <div class="other-products">
             <div class="other-products-wrapper">

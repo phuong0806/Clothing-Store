@@ -19,7 +19,6 @@
 
     @RenderSection("cssHeader", required: false)
 </head>
-
 <body>
     <div id="page" class="content">
         <header>
@@ -56,6 +55,8 @@
                         <a href="" class="child-bread-crum active">New Arrivals</a>
                     </div>
                 </div>
+<<<<<<< HEAD
+=======
                 <div class="col-sm-12">
                     <div class="big-category">
                         <div class="title-category">
@@ -66,17 +67,22 @@
                 <div class="col-sm-12">
                     <div class="menu-bottom">
                         <ul>
-                            <li><a href="" class="active">New Arrivals</a></li>
+                            @foreach (var item in ViewBag.DanhMucSanPham)
+                            {
+                                <li><a href="">@item.TenLoai</a></li>
+                            }
+                            @*<li><a href="" class="active">New Arrivals</a></li>
                             <li><a href="">TOP</a></li>
                             <li><a href="">Shirt</a></li>
                             <li><a href="">Dress</a></li>
                             <li><a href="">Vest</a></li>
                             <li><a href="">Skirt/Shorts</a></li>
                             <li><a href="">Pants</a></li>
-                            <li><a href="">Signature Line</a></li>
+                            <li><a href="">Signature Line</a></li>*@
                         </ul>
                     </div>
                 </div>
+>>>>>>> de7c07d9bfd9a372a532e9993c71e7bf0d4987d4
             </div>
         </header>
         <main>
@@ -122,8 +128,15 @@
             </div>
         </footer>
     </div>
-
+    <a href="/gio-hang" class="cart">
+        <div class="relative">
+            <img src="~/libs/Image/logo/bag.png" />
+            <span class="number-product"></span>
+        </div>
+    </a>
     <!-- JS -->
+    <script src="~/libs/plugins/mustache.js"></script>
+    <script src="~/libs/js/index.js"></script>
     @RenderSection("jsFooter", required: false)
 </body>
 </html>

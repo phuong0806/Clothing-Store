@@ -78,3 +78,38 @@ label.error, span.error {
     color:#ec3535;
 }
 
+
+.table thead th {
+    border-bottom: none;
+    color: #1379e6;
+    background: #f9f9f9;
+    border: none !important;
+}
+
+.table td {
+    border: none;
+    border-bottom: 1px solid #ddd;
+}
+
+.table tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+    .table td img {
+        width: 65px;
+        height: 65px;
+    }
+
+    .table td img {
+        width: 65px;
+        height: 65px;
+        object-fit: contain;
+        cursor: pointer;
+        background: gray;
+    }
+
+
+.table {
+    border: 1px solid #ddd;
+    font-size: 14px;
+}

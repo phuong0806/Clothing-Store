@@ -1,0 +1,159 @@
+﻿@{
+    ViewBag.Title = "Giỏ hàng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section cssHeader {
+    <style>
+        table {
+            width: 100%;
+            margin-top: 50px;
+            border: 1px solid #333;
+        }
+
+        th {
+            background: #333;
+            color: white;
+            font-weight: bold;
+            padding: 5px 0px;
+        }
+
+        td, th {
+            border-bottom: 1px solid #333;
+            border-right: 1px solid gray;
+            padding: 5px 10px;
+        }
+
+        select {
+            background: #e2e2e2;
+            border: none;
+            color: #333;
+            width:125px;
+            font-size: 1rem;
+            padding: 0px 5px;
+        }
+
+            select option {
+                text-align: center;
+            }
+
+        .no-border {
+            border: none;
+        }
+
+        .total-cost {
+            font-size: 18px;
+            color: #a37e2c;
+            font-weight: bold;
+        }
+
+        .btn-dathang {
+            padding: 5px 15px;
+            background: #333333;
+            color: #fff;
+            width: auto;
+            text-decoration: none;
+            margin-top: 8px;
+            display: block;
+            border-radius: 3px;
+        }
+
+            .btn-dathang:hover {
+                text-decoration: none;
+                color: white;
+            }
+
+        .del-sanpham {
+            text-decoration: none;
+            color: gray;
+            display: block;
+            padding-top: 10px;
+            cursor: pointer;
+        }
+
+            .del-sanpham:hover {
+                text-decoration: none;
+                color: #333;
+            }
+    </style>
+}
+
+@section jsFooter {
+    <script src="~/libs/js/giohang.js"></script>
+}
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="big-category">
+            <div class="title-category">
+                CART
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12">
+        <div class="menu-bottom">
+            <!--EMPTY-->
+        </div>
+    </div>
+</div>
+<div class="row mb-3">
+    <div class="col-sm-12">
+        <table style="" id="result-data">
+            <tr class="text-center">
+                <th style="width:15%">Hình ảnh</th>
+                <th class="text-left" style="width:40%">Chi tiết</th>
+                <th style="width:15%">Số lượng</th>
+                <th style="width:15%">Giá</th>
+                <th style="width:15%">Thành tiền</th>
+            </tr>
+        </table>
+        <div class="float-right">
+            <div class="total-cost">
+                <span>Tổng cộng: </span>
+                <span class="total-cost-cart">0đ</span>
+            </div>
+            <div>
+                <a href="/thanh-toan" class="btn-dathang">TIẾN HÀNH ĐẶT HÀNG</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script id="data-template" type="x-tmpl-mustache">
+    <tr class="text-center">
+        <td>
+            <img src="{{HinhAnh}}" width="100" />
+        </td>
+        <td class="text-left">
+            <div style="padding-bottom:10px;">{{TenSanPham}}</div>
+            <div style="padding-bottom:10px;">
+                <span style="margin-right:20px">KÍCH CỠ:</span>
+                <select class="kichco-sel id{{ID}}" data-id="{{ID}}">
+                    {{#KichCo}}
+                    <option value="{{ID}}">{{Name}}</option>
+                    {{/KichCo}}
+                </select>
+            </div>
+            <div style="padding-bottom:10px;">
+                <span style="margin-right:13px">MÀU SẮC:</span>
+                <select class="mau-sel id{{ID}}" data-id="{{ID}}">
+                    {{#Mau}}
+                        <option value="{{ID}}">{{Name}}</option>
+                    {{/Mau}}
+                </select>
+            </div>
+            <div>
+                <a class="del-sanpham" data-id={{ID}}>Xóa khỏi giỏ hàng</a>
+            </div>
+        </td>
+        <td>
+            <select class="amount-sel id{{ID}}" data-id="{{ID}}">
+                {{#SoLuong}}
+                <option value="{{value}}">{{value}}</option>
+                {{/SoLuong}}
+            </select>
+        </td>
+        <td><span class="price-product id{{ID}}">{{Gia}}</span></td>
+        <td><span class="total-cost-product id{{ID}}">0 ₫</span></td>
+    </tr>
+</script>
